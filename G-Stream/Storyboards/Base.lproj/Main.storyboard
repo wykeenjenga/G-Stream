@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,9 +21,8 @@
         <!--Navigation Controller-->
         <scene sceneID="hPj-Mt-WQV">
             <objects>
-                <navigationController storyboardIdentifier="OnBoardingScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YDE-kN-hZo" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="OnBoardingScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="YDE-kN-hZo" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MW2-n9-cdH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -57,6 +57,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Sz-GW-gRX"/>
+                                            <segue destination="NLv-e7-KZQ" kind="show" id="4I6-WQ-Io6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWo-mB-QTU">
@@ -138,7 +139,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="0yB-d1-UrX"/>
                                     <constraint firstItem="qYw-c3-nZy" firstAttribute="top" secondItem="1ui-ba-nlD" secondAttribute="top" constant="-10" id="31f-el-Lgb"/>
@@ -152,9 +153,9 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="glogo" translatesAutoresizingMaskIntoConstraints="NO" id="k7I-Ns-drw">
-                                <rect key="frame" x="20" y="112" width="374" height="180"/>
+                                <rect key="frame" x="20" y="88" width="374" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="zk6-8b-Ys4"/>
+                                    <constraint firstAttribute="height" constant="180" id="vsf-G7-Fxd"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdb-q2-QQf">
@@ -172,24 +173,24 @@ connect with students in natura wavs</string>
                                 <string key="text">Attrack the
 Best Tallent</string>
                                 <fontDescription key="fontDescription" name="Recoleta-Bold" family="Recoleta" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="k7I-Ns-drw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="9Wj-ZE-hT9"/>
                             <constraint firstItem="xdb-q2-QQf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9g8-I4-5CK"/>
                             <constraint firstItem="1ui-ba-nlD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="H5m-xG-xBh"/>
                             <constraint firstItem="1ui-ba-nlD" firstAttribute="top" secondItem="xdb-q2-QQf" secondAttribute="bottom" constant="40" id="Pi4-aN-9kI"/>
-                            <constraint firstItem="k7I-Ns-drw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="Y2V-0x-U5a"/>
+                            <constraint firstItem="k7I-Ns-drw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Tcg-By-ypS"/>
                             <constraint firstItem="1xQ-ax-gla" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YpC-hV-T8K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xdb-q2-QQf" secondAttribute="trailing" constant="20" id="dFh-D6-jfj"/>
-                            <constraint firstItem="k7I-Ns-drw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="dto-pV-m4j"/>
                             <constraint firstItem="1ui-ba-nlD" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fDh-Ib-IJn"/>
                             <constraint firstItem="xdb-q2-QQf" firstAttribute="top" secondItem="1xQ-ax-gla" secondAttribute="bottom" constant="8" symbolic="YES" id="hp5-bz-1aX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k7I-Ns-drw" secondAttribute="trailing" constant="20" id="kiO-UK-jjc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1xQ-ax-gla" secondAttribute="trailing" constant="20" id="mdN-Lf-Zr2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k7I-Ns-drw" secondAttribute="trailing" constant="20" id="qUZ-x8-fFW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1ui-ba-nlD" secondAttribute="trailing" constant="20" id="yWy-0x-JmX"/>
                         </constraints>
                     </view>
@@ -207,9 +208,96 @@ Best Tallent</string>
             </objects>
             <point key="canvasLocation" x="-81.159420289855078" y="225.66964285714283"/>
         </scene>
+        <!--Schedule-->
+        <scene sceneID="qJl-ML-gab">
+            <objects>
+                <viewController id="ODw-Yd-awe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nXZ-3t-fCC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0WD-ne-dBd"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Schedule" id="h2E-4Q-rvf">
+                        <imageReference key="image" image="timer" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i12-xl-ySb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1664" y="610"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="1N5-8D-nGQ">
+            <objects>
+                <viewController id="1Id-4t-L9i" customClass="AGHomeViewController" customModule="G_Stream" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nkg-JV-Kbn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Stream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBO-Q8-t5n">
+                                <rect key="frame" x="20" y="64" width="374" height="38.5"/>
+                                <fontDescription key="fontDescription" name="Recoleta-Bold" family="Recoleta" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sMd-Ye-lzH">
+                                <rect key="frame" x="20" y="114.5" width="374" height="678.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0JF-LA-uqm"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0JF-LA-uqm" firstAttribute="bottom" secondItem="sMd-Ye-lzH" secondAttribute="bottom" constant="20" id="0G6-dk-Nox"/>
+                            <constraint firstItem="sMd-Ye-lzH" firstAttribute="leading" secondItem="0JF-LA-uqm" secondAttribute="leading" constant="20" id="0d0-Zt-ZVE"/>
+                            <constraint firstItem="0JF-LA-uqm" firstAttribute="trailing" secondItem="sMd-Ye-lzH" secondAttribute="trailing" constant="20" id="40H-ze-rSh"/>
+                            <constraint firstItem="FBO-Q8-t5n" firstAttribute="leading" secondItem="0JF-LA-uqm" secondAttribute="leading" constant="20" id="6ZQ-Gi-LjJ"/>
+                            <constraint firstItem="0JF-LA-uqm" firstAttribute="trailing" secondItem="FBO-Q8-t5n" secondAttribute="trailing" constant="20" id="kKv-uQ-pEM"/>
+                            <constraint firstItem="sMd-Ye-lzH" firstAttribute="top" secondItem="FBO-Q8-t5n" secondAttribute="bottom" constant="12" id="n3L-X9-AE2"/>
+                            <constraint firstItem="FBO-Q8-t5n" firstAttribute="top" secondItem="0JF-LA-uqm" secondAttribute="top" constant="20" id="nR9-cG-HY4"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Events" id="p4f-Yf-9sv">
+                        <imageReference key="image" image="video" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" name="orange"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="sMd-Ye-lzH" id="ypQ-9h-FNh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lmS-IZ-fIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515.9420289855075" y="-61.607142857142854"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Z5X-yZ-8Gy">
+            <objects>
+                <tabBarController id="NLv-e7-KZQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KPG-ka-gBz"/>
+                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="iQC-m0-X8a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="orange"/>
+                        <tabBarAppearance key="standardAppearance" backgroundEffect="regular">
+                            <color key="backgroundColor" name="white"/>
+                        </tabBarAppearance>
+                    </tabBar>
+                    <connections>
+                        <segue destination="1Id-4t-L9i" kind="relationship" relationship="viewControllers" id="fBe-mL-bl0"/>
+                        <segue destination="ODw-Yd-awe" kind="relationship" relationship="viewControllers" id="xED-eM-kNv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CeG-qV-PVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="226"/>
+        </scene>
     </scenes>
     <resources>
         <image name="glogo" width="165" height="180"/>
+        <image name="timer" catalog="system" width="128" height="121"/>
+        <image name="video" catalog="system" width="128" height="83"/>
         <namedColor name="AccentColor">
             <color red="0.25490196078431371" green="0.082352941176470587" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

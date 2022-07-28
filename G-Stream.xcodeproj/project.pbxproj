@@ -34,6 +34,8 @@
 		CE1121282892A6AE0046619D /* RecoletaAlt-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11211D2892A6AE0046619D /* RecoletaAlt-Regular.ttf */; };
 		CE1121292892A6AE0046619D /* Recoleta-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11211E2892A6AE0046619D /* Recoleta-Black.ttf */; };
 		CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11212A2892B1BE0046619D /* AGConstants.swift */; };
+		CE628FE128931C51006C3552 /* AGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FDF28931C51006C3552 /* AGHomeViewController.swift */; };
+		CE628FE528932291006C3552 /* AGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FE428932291006C3552 /* AGTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		CE11211D2892A6AE0046619D /* RecoletaAlt-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RecoletaAlt-Regular.ttf"; sourceTree = "<group>"; };
 		CE11211E2892A6AE0046619D /* Recoleta-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-Black.ttf"; sourceTree = "<group>"; };
 		CE11212A2892B1BE0046619D /* AGConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGConstants.swift; sourceTree = "<group>"; };
+		CE628FDF28931C51006C3552 /* AGHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGHomeViewController.swift; sourceTree = "<group>"; };
+		CE628FE428932291006C3552 /* AGTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGTabBarController.swift; sourceTree = "<group>"; };
 		E7E2F9EC0FF2C7ED9E1C4B8F /* Pods-G-Stream-G-StreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Stream-G-StreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-G-Stream-G-StreamUITests/Pods-G-Stream-G-StreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,6 +255,7 @@
 		CE11210528928E970046619D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				CE628FE328932272006C3552 /* AGTabBarController */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -349,6 +354,7 @@
 		CE628FDD28931BCF006C3552 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CE628FDF28931C51006C3552 /* AGHomeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -358,6 +364,14 @@
 			children = (
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CE628FE328932272006C3552 /* AGTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				CE628FE428932291006C3552 /* AGTabBarController.swift */,
+			);
+			path = AGTabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -633,8 +647,10 @@
 				CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */,
 				CE1120D028928CA70046619D /* AGAppDelegate.swift in Sources */,
 				CE11210A28928F370046619D /* AGAppConfiguration.swift in Sources */,
+				CE628FE528932291006C3552 /* AGTabBarController.swift in Sources */,
 				CE11211228929FD60046619D /* Accessors.swift in Sources */,
 				CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */,
+				CE628FE128931C51006C3552 /* AGHomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
