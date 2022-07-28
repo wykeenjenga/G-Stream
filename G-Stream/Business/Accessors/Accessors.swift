@@ -21,6 +21,6 @@ struct Accessors {
     }
     
     struct AppDelegate {
-        static let delegate: AGAppDelegate = UIApplication.shared.delegate as! APAppDelegate
+        static let delegate: AGAppDelegate = UIApplication.shared.delegate as! AGAppDelegate
     }
 }

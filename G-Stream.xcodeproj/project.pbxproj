@@ -11,7 +11,6 @@
 		89855AA55ED004FE64B95E95 /* Pods_G_Stream_G_StreamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C302B27DB79312A68A304AA /* Pods_G_Stream_G_StreamUITests.framework */; };
 		8BC25AFBF51A42E81751A51F /* Pods_G_Stream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27444AF3C351EF45BD8EE4C5 /* Pods_G_Stream.framework */; };
 		CE1120D028928CA70046619D /* AGAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120CF28928CA70046619D /* AGAppDelegate.swift */; };
-		CE1120D228928CA70046619D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120D128928CA70046619D /* SceneDelegate.swift */; };
 		CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120D328928CA70046619D /* AGHardwallModule.swift */; };
 		CE1120D728928CA70046619D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1120D528928CA70046619D /* Main.storyboard */; };
 		CE1120D928928CAA0046619D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1120D828928CAA0046619D /* Assets.xcassets */; };
@@ -23,6 +22,18 @@
 		CE11210B28928F370046619D /* AGAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11210928928F370046619D /* AGAppConfiguration.swift */; };
 		CE11210C28928F370046619D /* AGAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11210928928F370046619D /* AGAppConfiguration.swift */; };
 		CE11211228929FD60046619D /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11211128929FD60046619D /* Accessors.swift */; };
+		CE11211F2892A6AE0046619D /* RecoletaAlt-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1121142892A6AD0046619D /* RecoletaAlt-Bold.ttf */; };
+		CE1121202892A6AE0046619D /* RecoletaAlt-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1121152892A6AD0046619D /* RecoletaAlt-Black.ttf */; };
+		CE1121212892A6AE0046619D /* Recoleta-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1121162892A6AD0046619D /* Recoleta-Regular.ttf */; };
+		CE1121222892A6AE0046619D /* Recoleta-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1121172892A6AD0046619D /* Recoleta-Bold.ttf */; };
+		CE1121232892A6AE0046619D /* Recoleta-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1121182892A6AE0046619D /* Recoleta-Medium.ttf */; };
+		CE1121242892A6AE0046619D /* RecoletaAlt-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE1121192892A6AE0046619D /* RecoletaAlt-SemiBold.ttf */; };
+		CE1121252892A6AE0046619D /* Recoleta-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11211A2892A6AE0046619D /* Recoleta-SemiBold.ttf */; };
+		CE1121262892A6AE0046619D /* RecoletaAlt-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11211B2892A6AE0046619D /* RecoletaAlt-Medium.ttf */; };
+		CE1121272892A6AE0046619D /* RecoletaAlt-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11211C2892A6AE0046619D /* RecoletaAlt-Light.ttf */; };
+		CE1121282892A6AE0046619D /* RecoletaAlt-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11211D2892A6AE0046619D /* RecoletaAlt-Regular.ttf */; };
+		CE1121292892A6AE0046619D /* Recoleta-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11211E2892A6AE0046619D /* Recoleta-Black.ttf */; };
+		CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11212A2892B1BE0046619D /* AGConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +64,6 @@
 		BE535B422C8158224F951AAD /* Pods-G-StreamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-StreamTests.debug.xcconfig"; path = "Target Support Files/Pods-G-StreamTests/Pods-G-StreamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1120CC28928CA70046619D /* G-Stream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "G-Stream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1120CF28928CA70046619D /* AGAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAppDelegate.swift; sourceTree = "<group>"; };
-		CE1120D128928CA70046619D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE1120D328928CA70046619D /* AGHardwallModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGHardwallModule.swift; sourceTree = "<group>"; };
 		CE1120D628928CA70046619D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE1120D828928CAA0046619D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +76,18 @@
 		CE1120F228928CAB0046619D /* G_StreamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_StreamUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE11210928928F370046619D /* AGAppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAppConfiguration.swift; sourceTree = "<group>"; };
 		CE11211128929FD60046619D /* Accessors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessors.swift; sourceTree = "<group>"; };
+		CE1121142892A6AD0046619D /* RecoletaAlt-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RecoletaAlt-Bold.ttf"; sourceTree = "<group>"; };
+		CE1121152892A6AD0046619D /* RecoletaAlt-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RecoletaAlt-Black.ttf"; sourceTree = "<group>"; };
+		CE1121162892A6AD0046619D /* Recoleta-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-Regular.ttf"; sourceTree = "<group>"; };
+		CE1121172892A6AD0046619D /* Recoleta-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-Bold.ttf"; sourceTree = "<group>"; };
+		CE1121182892A6AE0046619D /* Recoleta-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-Medium.ttf"; sourceTree = "<group>"; };
+		CE1121192892A6AE0046619D /* RecoletaAlt-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RecoletaAlt-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE11211A2892A6AE0046619D /* Recoleta-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-SemiBold.ttf"; sourceTree = "<group>"; };
+		CE11211B2892A6AE0046619D /* RecoletaAlt-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RecoletaAlt-Medium.ttf"; sourceTree = "<group>"; };
+		CE11211C2892A6AE0046619D /* RecoletaAlt-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RecoletaAlt-Light.ttf"; sourceTree = "<group>"; };
+		CE11211D2892A6AE0046619D /* RecoletaAlt-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RecoletaAlt-Regular.ttf"; sourceTree = "<group>"; };
+		CE11211E2892A6AE0046619D /* Recoleta-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-Black.ttf"; sourceTree = "<group>"; };
+		CE11212A2892B1BE0046619D /* AGConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGConstants.swift; sourceTree = "<group>"; };
 		E7E2F9EC0FF2C7ED9E1C4B8F /* Pods-G-Stream-G-StreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Stream-G-StreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-G-Stream-G-StreamUITests/Pods-G-Stream-G-StreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +219,7 @@
 		CE11210128928E6D0046619D /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CE11212A2892B1BE0046619D /* AGConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -234,6 +257,7 @@
 		CE11210628928EA40046619D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE1121132892A6500046619D /* Font */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -256,7 +280,6 @@
 		CE11210D289299E30046619D /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				CE1120D128928CA70046619D /* SceneDelegate.swift */,
 				CE1120CF28928CA70046619D /* AGAppDelegate.swift */,
 			);
 			path = AppDelegate;
@@ -285,6 +308,24 @@
 				CE11211128929FD60046619D /* Accessors.swift */,
 			);
 			path = Accessors;
+			sourceTree = "<group>";
+		};
+		CE1121132892A6500046619D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				CE11211E2892A6AE0046619D /* Recoleta-Black.ttf */,
+				CE1121172892A6AD0046619D /* Recoleta-Bold.ttf */,
+				CE1121182892A6AE0046619D /* Recoleta-Medium.ttf */,
+				CE1121162892A6AD0046619D /* Recoleta-Regular.ttf */,
+				CE11211A2892A6AE0046619D /* Recoleta-SemiBold.ttf */,
+				CE1121152892A6AD0046619D /* RecoletaAlt-Black.ttf */,
+				CE1121142892A6AD0046619D /* RecoletaAlt-Bold.ttf */,
+				CE11211C2892A6AE0046619D /* RecoletaAlt-Light.ttf */,
+				CE11211B2892A6AE0046619D /* RecoletaAlt-Medium.ttf */,
+				CE11211D2892A6AE0046619D /* RecoletaAlt-Regular.ttf */,
+				CE1121192892A6AE0046619D /* RecoletaAlt-SemiBold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,8 +440,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1121262892A6AE0046619D /* RecoletaAlt-Medium.ttf in Resources */,
+				CE1121252892A6AE0046619D /* Recoleta-SemiBold.ttf in Resources */,
 				CE1120DC28928CAA0046619D /* LaunchScreen.storyboard in Resources */,
+				CE1121222892A6AE0046619D /* Recoleta-Bold.ttf in Resources */,
 				CE1120D928928CAA0046619D /* Assets.xcassets in Resources */,
+				CE1121242892A6AE0046619D /* RecoletaAlt-SemiBold.ttf in Resources */,
+				CE1121212892A6AE0046619D /* Recoleta-Regular.ttf in Resources */,
+				CE1121232892A6AE0046619D /* Recoleta-Medium.ttf in Resources */,
+				CE1121202892A6AE0046619D /* RecoletaAlt-Black.ttf in Resources */,
+				CE11211F2892A6AE0046619D /* RecoletaAlt-Bold.ttf in Resources */,
+				CE1121272892A6AE0046619D /* RecoletaAlt-Light.ttf in Resources */,
+				CE1121292892A6AE0046619D /* Recoleta-Black.ttf in Resources */,
+				CE1121282892A6AE0046619D /* RecoletaAlt-Regular.ttf in Resources */,
 				CE1120D728928CA70046619D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,8 +601,8 @@
 				CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */,
 				CE1120D028928CA70046619D /* AGAppDelegate.swift in Sources */,
 				CE11210A28928F370046619D /* AGAppConfiguration.swift in Sources */,
-				CE1120D228928CA70046619D /* SceneDelegate.swift in Sources */,
 				CE11211228929FD60046619D /* Accessors.swift in Sources */,
+				CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -729,6 +781,7 @@
 				API_BASE_URL = "https://us-central1-dazn-sandbox.cloudfunctions.net/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QF8UV7G7B5;
@@ -737,6 +790,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -748,7 +803,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -759,6 +814,7 @@
 				API_BASE_URL = "https://us-central1-dazn-sandbox.cloudfunctions.net/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QF8UV7G7B5;
@@ -767,6 +823,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -778,7 +836,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
