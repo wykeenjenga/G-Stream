@@ -242,6 +242,7 @@
 		CE11210428928E860046619D /* PresentationModules */ = {
 			isa = PBXGroup;
 			children = (
+				CE628FDB28931BBB006C3552 /* HomeModule */,
 				CE11210F28929B390046619D /* HardwallModule */,
 			);
 			path = PresentationModules;
@@ -326,6 +327,37 @@
 				CE1121192892A6AE0046619D /* RecoletaAlt-SemiBold.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		CE628FDB28931BBB006C3552 /* HomeModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE628FDE28931BE9006C3552 /* TableViewCell */,
+				CE628FDD28931BCF006C3552 /* ViewController */,
+				CE628FDC28931BC7006C3552 /* ViewModel */,
+			);
+			path = HomeModule;
+			sourceTree = "<group>";
+		};
+		CE628FDC28931BC7006C3552 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE628FDD28931BCF006C3552 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CE628FDE28931BE9006C3552 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

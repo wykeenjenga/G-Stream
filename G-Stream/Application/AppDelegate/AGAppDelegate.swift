@@ -29,7 +29,7 @@ class AGAppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate{
     }
     
     func navigateToHome() {
-        if let navHome = Accessors.Storyboard.main.instantiate(with: "OnBoardingScreen") as? UIViewController {
+        if let navHome = Accessors.Storyboard.main.instantiate(with: "AGHomeController") as? UIViewController {
             if UIApplication.shared.keyWindow == nil {
                 self.window?.rootViewController = navHome
                 self.window?.makeKeyAndVisible()
@@ -39,7 +39,6 @@ class AGAppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate{
         }
     }
 
-    
     func navigateToOnboarding() {
         if let onboarding = Accessors.Storyboard.main.instantiate(with: "OnBoardingScreen") as? UIViewController {
             if UIApplication.shared.keyWindow == nil {
