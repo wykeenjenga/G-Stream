@@ -115,7 +115,6 @@
 				BE535B422C8158224F951AAD /* Pods-G-StreamTests.debug.xcconfig */,
 				6864730BC3FB27A465D4B934 /* Pods-G-StreamTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -691,6 +690,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A06B2E2407172F78E64E5AB /* Pods-G-Stream.debug.xcconfig */;
 			buildSettings = {
+				API_BASE_URL = "https://us-central1-dazn-sandbox.cloudfunctions.net/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -720,6 +720,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F8EC3AB7E5367C460AC6C9C /* Pods-G-Stream.release.xcconfig */;
 			buildSettings = {
+				API_BASE_URL = "https://us-central1-dazn-sandbox.cloudfunctions.net/";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
