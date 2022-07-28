@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AGHardwallModule: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

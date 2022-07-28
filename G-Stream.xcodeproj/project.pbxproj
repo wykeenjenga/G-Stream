@@ -12,7 +12,7 @@
 		8BC25AFBF51A42E81751A51F /* Pods_G_Stream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27444AF3C351EF45BD8EE4C5 /* Pods_G_Stream.framework */; };
 		CE1120D028928CA70046619D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120CF28928CA70046619D /* AppDelegate.swift */; };
 		CE1120D228928CA70046619D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120D128928CA70046619D /* SceneDelegate.swift */; };
-		CE1120D428928CA70046619D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120D328928CA70046619D /* ViewController.swift */; };
+		CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120D328928CA70046619D /* AGHardwallModule.swift */; };
 		CE1120D728928CA70046619D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1120D528928CA70046619D /* Main.storyboard */; };
 		CE1120D928928CAA0046619D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1120D828928CAA0046619D /* Assets.xcassets */; };
 		CE1120DC28928CAA0046619D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1120DA28928CAA0046619D /* LaunchScreen.storyboard */; };
@@ -53,7 +53,7 @@
 		CE1120CC28928CA70046619D /* G-Stream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "G-Stream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1120CF28928CA70046619D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1120D128928CA70046619D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE1120D328928CA70046619D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE1120D328928CA70046619D /* AGHardwallModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGHardwallModule.swift; sourceTree = "<group>"; };
 		CE1120D628928CA70046619D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE1120D828928CAA0046619D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE1120DB28928CAA0046619D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -144,13 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				CE1120FF28928E290046619D /* Application */,
-				CE1120CF28928CA70046619D /* AppDelegate.swift */,
-				CE1120D128928CA70046619D /* SceneDelegate.swift */,
-				CE1120D328928CA70046619D /* ViewController.swift */,
-				CE1120D528928CA70046619D /* Main.storyboard */,
-				CE1120D828928CAA0046619D /* Assets.xcassets */,
-				CE1120DA28928CAA0046619D /* LaunchScreen.storyboard */,
-				CE1120DD28928CAA0046619D /* Info.plist */,
 				CE11210028928E5F0046619D /* Data */,
 				CE11210128928E6D0046619D /* Utils */,
 				CE11210228928E760046619D /* Domain */,
@@ -159,6 +152,9 @@
 				CE11210528928E970046619D /* CustomViews */,
 				CE11210628928EA40046619D /* Resources */,
 				CE11210728928EB20046619D /* CustomTypes */,
+				CE1120DD28928CAA0046619D /* Info.plist */,
+				CE1120D828928CAA0046619D /* Assets.xcassets */,
+				CE11210E28929A260046619D /* Storyboards */,
 			);
 			path = "G-Stream";
 			sourceTree = "<group>";
@@ -183,6 +179,7 @@
 		CE1120FF28928E290046619D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CE11210D289299E30046619D /* AppDelegate */,
 				CE11210828928F060046619D /* AppConfiguration */,
 			);
 			path = Application;
@@ -219,6 +216,7 @@
 		CE11210428928E860046619D /* PresentationModules */ = {
 			isa = PBXGroup;
 			children = (
+				CE11210F28929B390046619D /* HardwallModule */,
 			);
 			path = PresentationModules;
 			sourceTree = "<group>";
@@ -250,6 +248,32 @@
 				CE11210928928F370046619D /* AGAppConfiguration.swift */,
 			);
 			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		CE11210D289299E30046619D /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				CE1120D128928CA70046619D /* SceneDelegate.swift */,
+				CE1120CF28928CA70046619D /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		CE11210E28929A260046619D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CE1120D528928CA70046619D /* Main.storyboard */,
+				CE1120DA28928CAA0046619D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		CE11210F28929B390046619D /* HardwallModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE1120D328928CA70046619D /* AGHardwallModule.swift */,
+			);
+			path = HardwallModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,7 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE1120D428928CA70046619D /* ViewController.swift in Sources */,
+				CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */,
 				CE1120D028928CA70046619D /* AppDelegate.swift in Sources */,
 				CE11210A28928F370046619D /* AGAppConfiguration.swift in Sources */,
 				CE1120D228928CA70046619D /* SceneDelegate.swift in Sources */,
