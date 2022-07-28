@@ -8,13 +8,22 @@
 import UIKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AGAppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        loadTheInitialScreen()
         return true
+    }
+    
+    private func loadTheInitialScreen() {
+        let isOnboardingShown = UserDefaults.standard.bool(forKey: "isOnboarding")
+        
+        if isOnboardingShown{
+            navigateToHome()
+        }else{
+            navigateToOnboarding()
+        }
     }
 
     // MARK: UISceneSession Lifecycle
@@ -31,6 +40,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    
+    func navigateToHome() {
+        
+    }
 
+    
+    func navigateToOnboarding() {
+        if let onboarding = Accessors.Storyboard.main.instantiate(with: "OnBoardingScreen") as? UIViewController {
+            if UIApplication.shared.keyWindow == nil {
+                self.window?.rootViewController = onboarding
+                self.window?.makeKeyAndVisible()
+            } else {
+                UIApplication.shared.keyWindow?.setRootViewController(onboarding, options: UIWindow.TransitionOptions(direction: .toRight))
+            }
+        } else {
+            assertionFailure("Could not load onboarding screen")
+        }
+    }
 }
 

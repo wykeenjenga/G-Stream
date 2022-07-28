@@ -10,7 +10,7 @@
 		5CA0AF6B8A372CC5661A1392 /* Pods_G_StreamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FAE7D6C9ECB712051DACAC9 /* Pods_G_StreamTests.framework */; };
 		89855AA55ED004FE64B95E95 /* Pods_G_Stream_G_StreamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C302B27DB79312A68A304AA /* Pods_G_Stream_G_StreamUITests.framework */; };
 		8BC25AFBF51A42E81751A51F /* Pods_G_Stream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27444AF3C351EF45BD8EE4C5 /* Pods_G_Stream.framework */; };
-		CE1120D028928CA70046619D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120CF28928CA70046619D /* AppDelegate.swift */; };
+		CE1120D028928CA70046619D /* AGAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120CF28928CA70046619D /* AGAppDelegate.swift */; };
 		CE1120D228928CA70046619D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120D128928CA70046619D /* SceneDelegate.swift */; };
 		CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1120D328928CA70046619D /* AGHardwallModule.swift */; };
 		CE1120D728928CA70046619D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE1120D528928CA70046619D /* Main.storyboard */; };
@@ -22,6 +22,7 @@
 		CE11210A28928F370046619D /* AGAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11210928928F370046619D /* AGAppConfiguration.swift */; };
 		CE11210B28928F370046619D /* AGAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11210928928F370046619D /* AGAppConfiguration.swift */; };
 		CE11210C28928F370046619D /* AGAppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11210928928F370046619D /* AGAppConfiguration.swift */; };
+		CE11211228929FD60046619D /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11211128929FD60046619D /* Accessors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +52,7 @@
 		B355F852872EE7CFC0E4A9FC /* Pods-G-Stream-G-StreamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Stream-G-StreamUITests.release.xcconfig"; path = "Target Support Files/Pods-G-Stream-G-StreamUITests/Pods-G-Stream-G-StreamUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BE535B422C8158224F951AAD /* Pods-G-StreamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-StreamTests.debug.xcconfig"; path = "Target Support Files/Pods-G-StreamTests/Pods-G-StreamTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1120CC28928CA70046619D /* G-Stream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "G-Stream.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE1120CF28928CA70046619D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE1120CF28928CA70046619D /* AGAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAppDelegate.swift; sourceTree = "<group>"; };
 		CE1120D128928CA70046619D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE1120D328928CA70046619D /* AGHardwallModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGHardwallModule.swift; sourceTree = "<group>"; };
 		CE1120D628928CA70046619D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +65,7 @@
 		CE1120F028928CAB0046619D /* G_StreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_StreamUITests.swift; sourceTree = "<group>"; };
 		CE1120F228928CAB0046619D /* G_StreamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = G_StreamUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE11210928928F370046619D /* AGAppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAppConfiguration.swift; sourceTree = "<group>"; };
+		CE11211128929FD60046619D /* Accessors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessors.swift; sourceTree = "<group>"; };
 		E7E2F9EC0FF2C7ED9E1C4B8F /* Pods-G-Stream-G-StreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Stream-G-StreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-G-Stream-G-StreamUITests/Pods-G-Stream-G-StreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +211,7 @@
 		CE11210328928E7D0046619D /* Business */ = {
 			isa = PBXGroup;
 			children = (
+				CE11211028929FB80046619D /* Accessors */,
 			);
 			path = Business;
 			sourceTree = "<group>";
@@ -254,7 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				CE1120D128928CA70046619D /* SceneDelegate.swift */,
-				CE1120CF28928CA70046619D /* AppDelegate.swift */,
+				CE1120CF28928CA70046619D /* AGAppDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -274,6 +277,14 @@
 				CE1120D328928CA70046619D /* AGHardwallModule.swift */,
 			);
 			path = HardwallModule;
+			sourceTree = "<group>";
+		};
+		CE11211028929FB80046619D /* Accessors */ = {
+			isa = PBXGroup;
+			children = (
+				CE11211128929FD60046619D /* Accessors.swift */,
+			);
+			path = Accessors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,9 +547,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */,
-				CE1120D028928CA70046619D /* AppDelegate.swift in Sources */,
+				CE1120D028928CA70046619D /* AGAppDelegate.swift in Sources */,
 				CE11210A28928F370046619D /* AGAppConfiguration.swift in Sources */,
 				CE1120D228928CA70046619D /* SceneDelegate.swift in Sources */,
+				CE11211228929FD60046619D /* Accessors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
