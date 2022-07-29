@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class APDIContainer {
+final class AGDIContainer {
     // MARK: - Network
     lazy var apiDataTransferService: DataTransfer = {
         let config = APNetworkConfiguration(baseURL: URL(string: APAppConfigurations.apiBaseURL)!)
@@ -18,19 +18,18 @@ final class APDIContainer {
     }()
 }
 
-extension APDIContainer {
+extension AGDIContainer {
     
     // MARK: DIContainers of scenes
     
-    /// Creates User Profile Detail Page DIContainer.
-    /// - Parameter user: APUser object whose profile needs to be viewed.
-    func makeUserProfileDIContainer() -> APUserProfileDIContainer {
-        let dependencies = APUserProfileDIContainer.Dependencies(apiDataTransferService: apiDataTransferService, user: user)
-        return APUserProfileDIContainer(dependencies: dependencies)
+    /// Creates AGLive DIContainer.
+    func makeLiveDIContainer() -> AGLiveDIContainer {
+        let dependencies = AGLiveDIContainer.Dependencies(apiDataTransferService: apiDataTransferService)
+        return AGLiveDIContainer(dependencies: dependencies)
     }
-    /// Creates create home Page DI Container.
-    func makeHomeDIContainer() -> APHomeDIContainer {
-        let dependencies = APHomeDIContainer.Dependencies(apiDataTransferService: apiDataTransferService, user: user)
-        return APHomeDIContainer(dependencies: dependencies)
+    /// Creates AGSchedule DI Container.
+    func makeScheduleDIContainer() -> AGScheduleDIContainer {
+        let dependencies = AGScheduleDIContainer.Dependencies(apiDataTransferService: apiDataTransferService)
+        return AGScheduleDIContainer(dependencies: dependencies)
     }
 }

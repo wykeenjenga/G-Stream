@@ -8,11 +8,11 @@
 
 import UIKit
 
-class AGLiveViewController: UIViewController {
+class AGLiveEventViewController: BaseViewController{
 
-    @IBOutlet var liveTabelView: UITableView! {
+    @IBOutlet weak var liveEventsTabelView: UITableView! {
         didSet{
-            liveTabelView.register(AGLiveTableViewCell.self, forCellReuseIdentifier: "AGLiveTableViewCell")
+            self.liveEventsTabelView.register(AGEventsLiveTableViewCell.self, forCellReuseIdentifier: "liveCell")
         }
     }
     
@@ -21,15 +21,25 @@ class AGLiveViewController: UIViewController {
         // Do any additional setup after loawding the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     //Mark: - Initialiser Method
-    final class func create() -> AGLiveViewController {
-        let view = AGLiveViewController(nibName: "AGLiveViewController", bundle: nil)
+    final class func create() -> AGLiveEventViewController {
+        let view = AGLiveEventViewController(nibName: "AGLiveEventViewController", bundle: nil)
         return view
     }
 
 }
 
-extension AGLiveViewController: UITableViewDelegate, UITableViewDataSource{
+extension AGLiveEventViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -40,8 +50,9 @@ extension AGLiveViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView[AGLiveTableViewCell.self, indexPath]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "liveCell", for: indexPath)
         //cell.reportTitle.text = reports[indexPath.row]
+        
         return cell
     }
     

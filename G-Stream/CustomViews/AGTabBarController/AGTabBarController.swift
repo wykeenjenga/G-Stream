@@ -9,9 +9,14 @@
 import Foundation
 import UIKit
 
-class AGTabBarController: UITabBarController{
+class AGTabBarController: UIViewController{
     
     @IBInspectable var initIndex: Int = 1
+    
+    var viewControllers: [UIViewController] = [] {
+        didSet {
+        }
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()

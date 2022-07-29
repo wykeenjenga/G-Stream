@@ -20,8 +20,8 @@ final class AGLiveDIContainer {
         self.dependencies = dependencies
     }
     
-    func makeLiveViewController() -> AGLiveViewController {
-        return AGLiveViewController.create()
+    func makeLiveViewController() -> AGLiveEventViewController {
+        return AGLiveEventViewController.create()
     }
     
 }

@@ -11,6 +11,7 @@ import UIKit
 class AGAppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate{
     
     var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+    let appDiContainer = AGDIContainer()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool{
         
@@ -29,13 +30,25 @@ class AGAppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate{
     }
     
     func navigateToHome() {
-        if let navHome = Accessors.Storyboard.main.instantiate(with: "AGHomeController") as? UIViewController {
+        if let tabBarController = Accessors.Storyboard.tabBar.instantiate(with: "AGTabBarController") as? AGTabBarController {
+            
+            var viewControllers = [UIViewController]()
+            
+            let homeVC = Accessors.AppDelegate.delegate.appDiContainer.makeLiveDIContainer().makeLiveViewController()
+            let navHomeVC = UINavigationController(rootViewController: homeVC)
+            viewControllers.append(navHomeVC)
+            
+            let chatListVC = Accessors.AppDelegate.delegate.appDiContainer.makeScheduleDIContainer().makeScheduleViewController()
+            let navChatVC = UINavigationController(rootViewController: chatListVC)
+            viewControllers.append(navChatVC)
+            
             if UIApplication.shared.keyWindow == nil {
-                self.window?.rootViewController = navHome
+                self.window?.rootViewController = tabBarController
                 self.window?.makeKeyAndVisible()
             }
+            
         } else {
-            assertionFailure("Could not load home screen")
+            assertionFailure("Could not load the tabBar")
         }
     }
 

@@ -13,6 +13,7 @@ struct Accessors {
     
     enum Storyboard: String {
         case main = "Main"
+        case tabBar = "AGTabBarController"
         
         func instantiate(with identifier: String) -> AnyObject {
             let storyboard = UIStoryboard(name: self.rawValue, bundle: nil)

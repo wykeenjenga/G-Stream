@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AGLiveTableViewCell: UITableViewCell {
+class AGEventsLiveTableViewCell: UITableViewCell {
 
     @IBOutlet var leagueImage: UIImageView!
     @IBOutlet var teams: UILabel!
