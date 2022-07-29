@@ -34,8 +34,14 @@
 		CE1121282892A6AE0046619D /* RecoletaAlt-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11211D2892A6AE0046619D /* RecoletaAlt-Regular.ttf */; };
 		CE1121292892A6AE0046619D /* Recoleta-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE11211E2892A6AE0046619D /* Recoleta-Black.ttf */; };
 		CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11212A2892B1BE0046619D /* AGConstants.swift */; };
-		CE628FE128931C51006C3552 /* AGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FDF28931C51006C3552 /* AGHomeViewController.swift */; };
 		CE628FE528932291006C3552 /* AGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FE428932291006C3552 /* AGTabBarController.swift */; };
+		CE628FE8289325EB006C3552 /* AGLiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FE6289325EB006C3552 /* AGLiveTableViewCell.swift */; };
+		CE628FE9289325EB006C3552 /* AGLiveTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE628FE7289325EB006C3552 /* AGLiveTableViewCell.xib */; };
+		CE628FF028932FAD006C3552 /* AGLiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FEE28932FAD006C3552 /* AGLiveViewController.swift */; };
+		CE628FF128932FAD006C3552 /* AGLiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE628FEF28932FAD006C3552 /* AGLiveViewController.xib */; };
+		CE628FF32893A985006C3552 /* AGLiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FF22893A985006C3552 /* AGLiveViewModel.swift */; };
+		CE628FF62893AD21006C3552 /* AGDynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FF52893AD21006C3552 /* AGDynamicType.swift */; };
+		CE628FF92893AD69006C3552 /* AGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FF82893AD69006C3552 /* AGError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +96,14 @@
 		CE11211D2892A6AE0046619D /* RecoletaAlt-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RecoletaAlt-Regular.ttf"; sourceTree = "<group>"; };
 		CE11211E2892A6AE0046619D /* Recoleta-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Recoleta-Black.ttf"; sourceTree = "<group>"; };
 		CE11212A2892B1BE0046619D /* AGConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGConstants.swift; sourceTree = "<group>"; };
-		CE628FDF28931C51006C3552 /* AGHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGHomeViewController.swift; sourceTree = "<group>"; };
 		CE628FE428932291006C3552 /* AGTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGTabBarController.swift; sourceTree = "<group>"; };
+		CE628FE6289325EB006C3552 /* AGLiveTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGLiveTableViewCell.swift; sourceTree = "<group>"; };
+		CE628FE7289325EB006C3552 /* AGLiveTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGLiveTableViewCell.xib; sourceTree = "<group>"; };
+		CE628FEE28932FAD006C3552 /* AGLiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGLiveViewController.swift; sourceTree = "<group>"; };
+		CE628FEF28932FAD006C3552 /* AGLiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGLiveViewController.xib; sourceTree = "<group>"; };
+		CE628FF22893A985006C3552 /* AGLiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGLiveViewModel.swift; sourceTree = "<group>"; };
+		CE628FF52893AD21006C3552 /* AGDynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGDynamicType.swift; sourceTree = "<group>"; };
+		CE628FF82893AD69006C3552 /* AGError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGError.swift; sourceTree = "<group>"; };
 		E7E2F9EC0FF2C7ED9E1C4B8F /* Pods-G-Stream-G-StreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Stream-G-StreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-G-Stream-G-StreamUITests/Pods-G-Stream-G-StreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -271,6 +283,8 @@
 		CE11210728928EB20046619D /* CustomTypes */ = {
 			isa = PBXGroup;
 			children = (
+				CE628FF72893AD56006C3552 /* APError */,
+				CE628FF42893AD0B006C3552 /* DynamicType */,
 			);
 			path = CustomTypes;
 			sourceTree = "<group>";
@@ -347,6 +361,7 @@
 		CE628FDC28931BC7006C3552 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CE628FF22893A985006C3552 /* AGLiveViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -354,7 +369,8 @@
 		CE628FDD28931BCF006C3552 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CE628FDF28931C51006C3552 /* AGHomeViewController.swift */,
+				CE628FEE28932FAD006C3552 /* AGLiveViewController.swift */,
+				CE628FEF28932FAD006C3552 /* AGLiveViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -362,6 +378,8 @@
 		CE628FDE28931BE9006C3552 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				CE628FE6289325EB006C3552 /* AGLiveTableViewCell.swift */,
+				CE628FE7289325EB006C3552 /* AGLiveTableViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -372,6 +390,22 @@
 				CE628FE428932291006C3552 /* AGTabBarController.swift */,
 			);
 			path = AGTabBarController;
+			sourceTree = "<group>";
+		};
+		CE628FF42893AD0B006C3552 /* DynamicType */ = {
+			isa = PBXGroup;
+			children = (
+				CE628FF52893AD21006C3552 /* AGDynamicType.swift */,
+			);
+			path = DynamicType;
+			sourceTree = "<group>";
+		};
+		CE628FF72893AD56006C3552 /* APError */ = {
+			isa = PBXGroup;
+			children = (
+				CE628FF82893AD69006C3552 /* AGError.swift */,
+			);
+			path = APError;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,9 +520,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE628FF128932FAD006C3552 /* AGLiveViewController.xib in Resources */,
 				CE1121262892A6AE0046619D /* RecoletaAlt-Medium.ttf in Resources */,
 				CE1121252892A6AE0046619D /* Recoleta-SemiBold.ttf in Resources */,
 				CE1120DC28928CAA0046619D /* LaunchScreen.storyboard in Resources */,
+				CE628FE9289325EB006C3552 /* AGLiveTableViewCell.xib in Resources */,
 				CE1121222892A6AE0046619D /* Recoleta-Bold.ttf in Resources */,
 				CE1120D928928CAA0046619D /* Assets.xcassets in Resources */,
 				CE1121242892A6AE0046619D /* RecoletaAlt-SemiBold.ttf in Resources */,
@@ -645,12 +681,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */,
+				CE628FF62893AD21006C3552 /* AGDynamicType.swift in Sources */,
 				CE1120D028928CA70046619D /* AGAppDelegate.swift in Sources */,
 				CE11210A28928F370046619D /* AGAppConfiguration.swift in Sources */,
+				CE628FF32893A985006C3552 /* AGLiveViewModel.swift in Sources */,
 				CE628FE528932291006C3552 /* AGTabBarController.swift in Sources */,
+				CE628FF028932FAD006C3552 /* AGLiveViewController.swift in Sources */,
 				CE11211228929FD60046619D /* Accessors.swift in Sources */,
 				CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */,
-				CE628FE128931C51006C3552 /* AGHomeViewController.swift in Sources */,
+				CE628FF92893AD69006C3552 /* AGError.swift in Sources */,
+				CE628FE8289325EB006C3552 /* AGLiveTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

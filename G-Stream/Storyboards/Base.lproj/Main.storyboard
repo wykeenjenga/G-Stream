@@ -6,7 +6,6 @@
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -229,41 +228,17 @@ Best Tallent</string>
         <!--Events-->
         <scene sceneID="1N5-8D-nGQ">
             <objects>
-                <viewController id="1Id-4t-L9i" customClass="AGHomeViewController" customModule="G_Stream" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Id-4t-L9i" customClass="AGLiveViewController" customModule="G_Stream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nkg-JV-Kbn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Stream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBO-Q8-t5n">
-                                <rect key="frame" x="20" y="64" width="374" height="38.5"/>
-                                <fontDescription key="fontDescription" name="Recoleta-Bold" family="Recoleta" pointSize="28"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sMd-Ye-lzH">
-                                <rect key="frame" x="20" y="114.5" width="374" height="678.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0JF-LA-uqm"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="0JF-LA-uqm" firstAttribute="bottom" secondItem="sMd-Ye-lzH" secondAttribute="bottom" constant="20" id="0G6-dk-Nox"/>
-                            <constraint firstItem="sMd-Ye-lzH" firstAttribute="leading" secondItem="0JF-LA-uqm" secondAttribute="leading" constant="20" id="0d0-Zt-ZVE"/>
-                            <constraint firstItem="0JF-LA-uqm" firstAttribute="trailing" secondItem="sMd-Ye-lzH" secondAttribute="trailing" constant="20" id="40H-ze-rSh"/>
-                            <constraint firstItem="FBO-Q8-t5n" firstAttribute="leading" secondItem="0JF-LA-uqm" secondAttribute="leading" constant="20" id="6ZQ-Gi-LjJ"/>
-                            <constraint firstItem="0JF-LA-uqm" firstAttribute="trailing" secondItem="FBO-Q8-t5n" secondAttribute="trailing" constant="20" id="kKv-uQ-pEM"/>
-                            <constraint firstItem="sMd-Ye-lzH" firstAttribute="top" secondItem="FBO-Q8-t5n" secondAttribute="bottom" constant="12" id="n3L-X9-AE2"/>
-                            <constraint firstItem="FBO-Q8-t5n" firstAttribute="top" secondItem="0JF-LA-uqm" secondAttribute="top" constant="20" id="nR9-cG-HY4"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Events" id="p4f-Yf-9sv">
                         <imageReference key="image" image="video" catalog="system" symbolScale="large"/>
                         <color key="badgeColor" name="orange"/>
                     </tabBarItem>
-                    <connections>
-                        <outlet property="tableView" destination="sMd-Ye-lzH" id="ypQ-9h-FNh"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lmS-IZ-fIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,8 +285,5 @@ Best Tallent</string>
         <namedColor name="white">
             <color red="0.96078431372549022" green="0.90980392156862744" blue="0.89411764705882357" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
