@@ -52,6 +52,10 @@
 		CE6290112893B4D0006C3552 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290102893B4D0006C3552 /* StoryboardInstantiable.swift */; };
 		CE6290132893B51F006C3552 /* APProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290122893B51F006C3552 /* APProtocols.swift */; };
 		CE6290162893B6F3006C3552 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290152893B6F3006C3552 /* BaseViewController.swift */; };
+		CE6290182893B80A006C3552 /* AGLiveDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290172893B80A006C3552 /* AGLiveDIContainer.swift */; };
+		CE62901A2893BCBA006C3552 /* AGScheduleDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290192893BCB9006C3552 /* AGScheduleDIContainer.swift */; };
+		CE62901E2893BD49006C3552 /* AGScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62901C2893BD49006C3552 /* AGScheduleViewController.swift */; };
+		CE62901F2893BD49006C3552 /* AGScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE62901D2893BD49006C3552 /* AGScheduleViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +128,10 @@
 		CE6290102893B4D0006C3552 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 		CE6290122893B51F006C3552 /* APProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APProtocols.swift; sourceTree = "<group>"; };
 		CE6290152893B6F3006C3552 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CE6290172893B80A006C3552 /* AGLiveDIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGLiveDIContainer.swift; sourceTree = "<group>"; };
+		CE6290192893BCB9006C3552 /* AGScheduleDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduleDIContainer.swift; sourceTree = "<group>"; };
+		CE62901C2893BD49006C3552 /* AGScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduleViewController.swift; sourceTree = "<group>"; };
+		CE62901D2893BD49006C3552 /* AGScheduleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGScheduleViewController.xib; sourceTree = "<group>"; };
 		E7E2F9EC0FF2C7ED9E1C4B8F /* Pods-G-Stream-G-StreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Stream-G-StreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-G-Stream-G-StreamUITests/Pods-G-Stream-G-StreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -281,8 +289,9 @@
 		CE11210428928E860046619D /* PresentationModules */ = {
 			isa = PBXGroup;
 			children = (
+				CE62901B2893BD1E006C3552 /* ScheduleModule */,
 				CE6290142893B6F3006C3552 /* BaseViewController */,
-				CE628FDB28931BBB006C3552 /* HomeModule */,
+				CE628FDB28931BBB006C3552 /* LiveModule */,
 				CE11210F28929B390046619D /* HardwallModule */,
 			);
 			path = PresentationModules;
@@ -372,14 +381,14 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
-		CE628FDB28931BBB006C3552 /* HomeModule */ = {
+		CE628FDB28931BBB006C3552 /* LiveModule */ = {
 			isa = PBXGroup;
 			children = (
 				CE628FDE28931BE9006C3552 /* TableViewCell */,
 				CE628FDD28931BCF006C3552 /* ViewController */,
 				CE628FDC28931BC7006C3552 /* ViewModel */,
 			);
-			path = HomeModule;
+			path = LiveModule;
 			sourceTree = "<group>";
 		};
 		CE628FDC28931BC7006C3552 /* ViewModel */ = {
@@ -437,6 +446,8 @@
 			isa = PBXGroup;
 			children = (
 				CE6290012893B20F006C3552 /* AGDIContainer.swift */,
+				CE6290172893B80A006C3552 /* AGLiveDIContainer.swift */,
+				CE6290192893BCB9006C3552 /* AGScheduleDIContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -476,6 +487,15 @@
 				CE6290152893B6F3006C3552 /* BaseViewController.swift */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		CE62901B2893BD1E006C3552 /* ScheduleModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE62901C2893BD49006C3552 /* AGScheduleViewController.swift */,
+				CE62901D2893BD49006C3552 /* AGScheduleViewController.xib */,
+			);
+			path = ScheduleModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -601,6 +621,7 @@
 				CE1121212892A6AE0046619D /* Recoleta-Regular.ttf in Resources */,
 				CE1121232892A6AE0046619D /* Recoleta-Medium.ttf in Resources */,
 				CE1121202892A6AE0046619D /* RecoletaAlt-Black.ttf in Resources */,
+				CE62901F2893BD49006C3552 /* AGScheduleViewController.xib in Resources */,
 				CE11211F2892A6AE0046619D /* RecoletaAlt-Bold.ttf in Resources */,
 				CE1121272892A6AE0046619D /* RecoletaAlt-Light.ttf in Resources */,
 				CE1121292892A6AE0046619D /* Recoleta-Black.ttf in Resources */,
@@ -752,6 +773,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE62900C2893B35F006C3552 /* NetworkLogger.swift in Sources */,
+				CE6290182893B80A006C3552 /* AGLiveDIContainer.swift in Sources */,
 				CE6290132893B51F006C3552 /* APProtocols.swift in Sources */,
 				CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */,
 				CE628FF62893AD21006C3552 /* AGDynamicType.swift in Sources */,
@@ -765,7 +787,9 @@
 				CE62900E2893B35F006C3552 /* AGRequest.swift in Sources */,
 				CE62900B2893B35F006C3552 /* NetworkService.swift in Sources */,
 				CE628FE528932291006C3552 /* AGTabBarController.swift in Sources */,
+				CE62901E2893BD49006C3552 /* AGScheduleViewController.swift in Sources */,
 				CE6290022893B20F006C3552 /* AGDIContainer.swift in Sources */,
+				CE62901A2893BCBA006C3552 /* AGScheduleDIContainer.swift in Sources */,
 				CE628FF028932FAD006C3552 /* AGLiveViewController.swift in Sources */,
 				CE11211228929FD60046619D /* Accessors.swift in Sources */,
 				CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */,

@@ -9,7 +9,6 @@
 import Foundation
 
 final class APDIContainer {
-    
     // MARK: - Network
     lazy var apiDataTransferService: DataTransfer = {
         let config = APNetworkConfiguration(baseURL: URL(string: APAppConfigurations.apiBaseURL)!)
@@ -25,12 +24,12 @@ extension APDIContainer {
     
     /// Creates User Profile Detail Page DIContainer.
     /// - Parameter user: APUser object whose profile needs to be viewed.
-    func makeUserProfileDIContainer(with user: APUser) -> APUserProfileDIContainer {
+    func makeUserProfileDIContainer() -> APUserProfileDIContainer {
         let dependencies = APUserProfileDIContainer.Dependencies(apiDataTransferService: apiDataTransferService, user: user)
         return APUserProfileDIContainer(dependencies: dependencies)
     }
     /// Creates create home Page DI Container.
-    func makeHomeDIContainer(with user: APUser) -> APHomeDIContainer {
+    func makeHomeDIContainer() -> APHomeDIContainer {
         let dependencies = APHomeDIContainer.Dependencies(apiDataTransferService: apiDataTransferService, user: user)
         return APHomeDIContainer(dependencies: dependencies)
     }

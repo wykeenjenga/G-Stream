@@ -20,6 +20,12 @@ class AGLiveViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loawding the view.
     }
+    
+    //Mark: - Initialiser Method
+    final class func create() -> AGLiveViewController {
+        let view = AGLiveViewController(nibName: "AGLiveViewController", bundle: nil)
+        return view
+    }
 
 }
 
