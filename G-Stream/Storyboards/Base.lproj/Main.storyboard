@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -56,7 +55,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Sz-GW-gRX"/>
-                                            <segue destination="NLv-e7-KZQ" kind="show" id="4I6-WQ-Io6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWo-mB-QTU">
@@ -207,72 +205,9 @@ Best Tallent</string>
             </objects>
             <point key="canvasLocation" x="-81.159420289855078" y="225.66964285714283"/>
         </scene>
-        <!--Schedule-->
-        <scene sceneID="qJl-ML-gab">
-            <objects>
-                <viewController id="ODw-Yd-awe" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nXZ-3t-fCC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0WD-ne-dBd"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" id="h2E-4Q-rvf">
-                        <imageReference key="image" image="timer" catalog="system" symbolScale="large"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i12-xl-ySb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1664" y="610"/>
-        </scene>
-        <!--Events-->
-        <scene sceneID="1N5-8D-nGQ">
-            <objects>
-                <viewController id="1Id-4t-L9i" customClass="AGLiveViewController" customModule="G_Stream" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Nkg-JV-Kbn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="0JF-LA-uqm"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Events" id="p4f-Yf-9sv">
-                        <imageReference key="image" image="video" catalog="system" symbolScale="large"/>
-                        <color key="badgeColor" name="orange"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lmS-IZ-fIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1515.9420289855075" y="-61.607142857142854"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="Z5X-yZ-8Gy">
-            <objects>
-                <tabBarController id="NLv-e7-KZQ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="KPG-ka-gBz"/>
-                    <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="iQC-m0-X8a">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" name="orange"/>
-                        <tabBarAppearance key="standardAppearance" backgroundEffect="regular">
-                            <color key="backgroundColor" name="white"/>
-                        </tabBarAppearance>
-                    </tabBar>
-                    <connections>
-                        <segue destination="1Id-4t-L9i" kind="relationship" relationship="viewControllers" id="fBe-mL-bl0"/>
-                        <segue destination="ODw-Yd-awe" kind="relationship" relationship="viewControllers" id="xED-eM-kNv"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CeG-qV-PVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="746" y="226"/>
-        </scene>
     </scenes>
     <resources>
         <image name="glogo" width="165" height="180"/>
-        <image name="timer" catalog="system" width="128" height="121"/>
-        <image name="video" catalog="system" width="128" height="83"/>
         <namedColor name="AccentColor">
             <color red="0.25490196078431371" green="0.082352941176470587" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

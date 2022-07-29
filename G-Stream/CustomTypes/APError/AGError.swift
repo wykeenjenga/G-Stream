@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct APError : Error {
+struct AGError : Error {
     var localizedTitle: String?
     var localizedDescription: String?
 }

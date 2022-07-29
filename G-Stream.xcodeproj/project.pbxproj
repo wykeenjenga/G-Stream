@@ -42,6 +42,16 @@
 		CE628FF32893A985006C3552 /* AGLiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FF22893A985006C3552 /* AGLiveViewModel.swift */; };
 		CE628FF62893AD21006C3552 /* AGDynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FF52893AD21006C3552 /* AGDynamicType.swift */; };
 		CE628FF92893AD69006C3552 /* AGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FF82893AD69006C3552 /* AGError.swift */; };
+		CE628FFF2893AF97006C3552 /* AGTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE628FFE2893AF97006C3552 /* AGTabBarController.storyboard */; };
+		CE6290022893B20F006C3552 /* AGDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290012893B20F006C3552 /* AGDIContainer.swift */; };
+		CE6290062893B2FA006C3552 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290052893B2FA006C3552 /* DataTransferService.swift */; };
+		CE62900B2893B35F006C3552 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290072893B35E006C3552 /* NetworkService.swift */; };
+		CE62900C2893B35F006C3552 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290082893B35F006C3552 /* NetworkLogger.swift */; };
+		CE62900D2893B35F006C3552 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290092893B35F006C3552 /* NetworkConfiguration.swift */; };
+		CE62900E2893B35F006C3552 /* AGRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62900A2893B35F006C3552 /* AGRequest.swift */; };
+		CE6290112893B4D0006C3552 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290102893B4D0006C3552 /* StoryboardInstantiable.swift */; };
+		CE6290132893B51F006C3552 /* APProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290122893B51F006C3552 /* APProtocols.swift */; };
+		CE6290162893B6F3006C3552 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290152893B6F3006C3552 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +114,16 @@
 		CE628FF22893A985006C3552 /* AGLiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGLiveViewModel.swift; sourceTree = "<group>"; };
 		CE628FF52893AD21006C3552 /* AGDynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGDynamicType.swift; sourceTree = "<group>"; };
 		CE628FF82893AD69006C3552 /* AGError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGError.swift; sourceTree = "<group>"; };
+		CE628FFE2893AF97006C3552 /* AGTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AGTabBarController.storyboard; sourceTree = "<group>"; };
+		CE6290012893B20F006C3552 /* AGDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGDIContainer.swift; sourceTree = "<group>"; };
+		CE6290052893B2FA006C3552 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
+		CE6290072893B35E006C3552 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CE6290082893B35F006C3552 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		CE6290092893B35F006C3552 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		CE62900A2893B35F006C3552 /* AGRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGRequest.swift; sourceTree = "<group>"; };
+		CE6290102893B4D0006C3552 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
+		CE6290122893B51F006C3552 /* APProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APProtocols.swift; sourceTree = "<group>"; };
+		CE6290152893B6F3006C3552 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		E7E2F9EC0FF2C7ED9E1C4B8F /* Pods-G-Stream-G-StreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Stream-G-StreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-G-Stream-G-StreamUITests/Pods-G-Stream-G-StreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -187,6 +207,7 @@
 				CE11210028928E5F0046619D /* Data */,
 				CE11210128928E6D0046619D /* Utils */,
 				CE11210228928E760046619D /* Domain */,
+				CE6290032893B27E006C3552 /* Infrastructure */,
 				CE11210328928E7D0046619D /* Business */,
 				CE11210428928E860046619D /* PresentationModules */,
 				CE11210528928E970046619D /* CustomViews */,
@@ -219,6 +240,7 @@
 		CE1120FF28928E290046619D /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				CE6290002893B1EB006C3552 /* DIContainer */,
 				CE11210D289299E30046619D /* AppDelegate */,
 				CE11210828928F060046619D /* AppConfiguration */,
 			);
@@ -236,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				CE11212A2892B1BE0046619D /* AGConstants.swift */,
+				CE62900F2893B4B9006C3552 /* Protocols */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -258,6 +281,7 @@
 		CE11210428928E860046619D /* PresentationModules */ = {
 			isa = PBXGroup;
 			children = (
+				CE6290142893B6F3006C3552 /* BaseViewController */,
 				CE628FDB28931BBB006C3552 /* HomeModule */,
 				CE11210F28929B390046619D /* HardwallModule */,
 			);
@@ -388,6 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				CE628FE428932291006C3552 /* AGTabBarController.swift */,
+				CE628FFE2893AF97006C3552 /* AGTabBarController.storyboard */,
 			);
 			path = AGTabBarController;
 			sourceTree = "<group>";
@@ -406,6 +431,51 @@
 				CE628FF82893AD69006C3552 /* AGError.swift */,
 			);
 			path = APError;
+			sourceTree = "<group>";
+		};
+		CE6290002893B1EB006C3552 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+				CE6290012893B20F006C3552 /* AGDIContainer.swift */,
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		CE6290032893B27E006C3552 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				CE6290042893B2E0006C3552 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		CE6290042893B2E0006C3552 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE6290052893B2FA006C3552 /* DataTransferService.swift */,
+				CE62900A2893B35F006C3552 /* AGRequest.swift */,
+				CE6290092893B35F006C3552 /* NetworkConfiguration.swift */,
+				CE6290082893B35F006C3552 /* NetworkLogger.swift */,
+				CE6290072893B35E006C3552 /* NetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CE62900F2893B4B9006C3552 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CE6290122893B51F006C3552 /* APProtocols.swift */,
+				CE6290102893B4D0006C3552 /* StoryboardInstantiable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CE6290142893B6F3006C3552 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE6290152893B6F3006C3552 /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -536,6 +606,7 @@
 				CE1121292892A6AE0046619D /* Recoleta-Black.ttf in Resources */,
 				CE1121282892A6AE0046619D /* RecoletaAlt-Regular.ttf in Resources */,
 				CE1120D728928CA70046619D /* Main.storyboard in Resources */,
+				CE628FFF2893AF97006C3552 /* AGTabBarController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,12 +751,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE62900C2893B35F006C3552 /* NetworkLogger.swift in Sources */,
+				CE6290132893B51F006C3552 /* APProtocols.swift in Sources */,
 				CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */,
 				CE628FF62893AD21006C3552 /* AGDynamicType.swift in Sources */,
 				CE1120D028928CA70046619D /* AGAppDelegate.swift in Sources */,
+				CE6290162893B6F3006C3552 /* BaseViewController.swift in Sources */,
+				CE6290112893B4D0006C3552 /* StoryboardInstantiable.swift in Sources */,
 				CE11210A28928F370046619D /* AGAppConfiguration.swift in Sources */,
+				CE6290062893B2FA006C3552 /* DataTransferService.swift in Sources */,
 				CE628FF32893A985006C3552 /* AGLiveViewModel.swift in Sources */,
+				CE62900D2893B35F006C3552 /* NetworkConfiguration.swift in Sources */,
+				CE62900E2893B35F006C3552 /* AGRequest.swift in Sources */,
+				CE62900B2893B35F006C3552 /* NetworkService.swift in Sources */,
 				CE628FE528932291006C3552 /* AGTabBarController.swift in Sources */,
+				CE6290022893B20F006C3552 /* AGDIContainer.swift in Sources */,
 				CE628FF028932FAD006C3552 /* AGLiveViewController.swift in Sources */,
 				CE11211228929FD60046619D /* Accessors.swift in Sources */,
 				CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */,
