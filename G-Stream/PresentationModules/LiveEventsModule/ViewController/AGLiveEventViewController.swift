@@ -12,7 +12,7 @@ class AGLiveEventViewController: BaseViewController{
 
     @IBOutlet weak var liveEventsTabelView: UITableView! {
         didSet{
-            self.liveEventsTabelView.register(AGEventsLiveTableViewCell.self, forCellReuseIdentifier: "liveCell")
+            self.liveEventsTabelView.register(AGEventsLiveTableViewCell.self)
         }
     }
     
@@ -50,7 +50,7 @@ extension AGLiveEventViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "liveCell", for: indexPath)
+        let cell = tableView[AGEventsLiveTableViewCell.self, indexPath]
         //cell.reportTitle.text = reports[indexPath.row]
         
         return cell

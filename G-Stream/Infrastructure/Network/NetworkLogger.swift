@@ -21,10 +21,10 @@ final public class DefaultNetworkErrorLogger: NetworkErrorLogger {
     
     public func log(request: URLRequest) {
         #if DEBUG
-//        print("-------------")
-//        print("request: \(request.url!)")
-//        print("headers: \(request.allHTTPHeaderFields!)")
-//        print("method: \(request.httpMethod!)")
+        print("-------------")
+        print("request: \(request.url!)")
+        print("headers: \(request.allHTTPHeaderFields!)")
+        print("method: \(request.httpMethod!)")
         if let httpBody = request.httpBody, let result = ((try? JSONSerialization.jsonObject(with: httpBody, options: []) as? [String: AnyObject]) as [String: AnyObject]??) {
             //print("body: \(String(describing: result))")
         }

@@ -9,6 +9,13 @@
 import Foundation
 import UIKit
 
+
+struct ConstantStrings{
+    static let gSorry = "Sorry!"
+    static let gExperiencingTechnicalIssue = "We are experience some technical problem. Please try again"
+    static let gOk = "OK"
+}
+
 struct OnboardingImages{
     static let schedule = UIImage(named: "schedule")
     static let fans = UIImage(named: "fans")

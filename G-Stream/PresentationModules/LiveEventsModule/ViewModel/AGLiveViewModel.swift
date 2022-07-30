@@ -34,13 +34,19 @@ protocol AGLiveViewModel: AGLiveViewModelInput, AGLiveViewModelOutput {
     
 }
 
-final class DefaultAGLiveViewViewModel: AGLiveViewModel {
+final class DefaultAGLiveViewModel: AGLiveViewModel {
     
 //    var feedId: Dynamic<String>
 //    var commentId: Dynamic<String> = Dynamic("")
 //    var userIdentifier: Dynamic<String> = Dynamic("")
 //    var feedIdentifier: Dynamic<String> = Dynamic("")
 //    var feedList: Dynamic<[Int]> = Dynamic([])
+    
+    private var liveEventsUseCase: liv
+    
+    init(liveEventsUsecase: AddFeedLikeUseCase) {
+        self.profile = Dynamic(profile)
+    }
     
 }
 

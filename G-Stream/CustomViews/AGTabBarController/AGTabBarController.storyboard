@@ -4,19 +4,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Montserrat-Bold.otf">
-            <string>Montserrat-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
         <scene sceneID="Q16-Eb-fAe">
             <objects>
-                <viewController storyboardIdentifier="APTabBarController" id="z2u-Bg-D6m" customClass="APTabBarController" customModule="Postagic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AGTabBarController" modalTransitionStyle="crossDissolve" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z2u-Bg-D6m" customClass="AGTabBarController" customModule="G_Stream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cWQ-Ji-LrT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,64 +32,61 @@
                                 </connections>
                             </containerView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0z-Sm-d60">
-                                <rect key="frame" x="0.0" y="791" width="414" height="71"/>
+                                <rect key="frame" x="0.0" y="786" width="414" height="76"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gyp-7d-FV6">
-                                        <rect key="frame" x="13.5" y="50" width="41" height="9"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8B-zk-Ojm" customClass="AGBindingButton" customModule="G_Stream" customModuleProvider="target">
+                                        <rect key="frame" x="80" y="0.0" width="46" height="46"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="9" id="cX5-Wy-lid"/>
+                                            <constraint firstAttribute="height" constant="46" id="XZs-nX-rth"/>
+                                            <constraint firstAttribute="width" constant="46" id="dd9-0B-74E"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Hb-8J-IUu">
-                                        <rect key="frame" x="93.5" y="50" width="41" height="9"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="9" id="Mmc-6F-FUi"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="8"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k8B-zk-Ojm" customClass="APBindingButton" customModule="Postagic" customModuleProvider="target">
-                                        <rect key="frame" x="19.5" y="19" width="29" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="29" id="o9L-le-Qfe"/>
-                                            <constraint firstAttribute="height" constant="29" id="ve5-9X-izB"/>
-                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" image="home"/>
                                         <state key="selected" image="homeSelected"/>
                                         <connections>
                                             <action selector="tabButtonTapped:" destination="z2u-Bg-D6m" eventType="touchUpInside" id="VLa-8B-g5E"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMm-bx-w7F" customClass="APBindingButton" customModule="Postagic" customModuleProvider="target">
-                                        <rect key="frame" x="99.5" y="19" width="29" height="29"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMm-bx-w7F" customClass="AGBindingButton" customModule="G_Stream" customModuleProvider="target">
+                                        <rect key="frame" x="278" y="0.0" width="46" height="46"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="29" id="4A0-8u-saj"/>
-                                            <constraint firstAttribute="height" constant="29" id="Du0-JY-eWN"/>
+                                            <constraint firstAttribute="width" constant="46" id="6hy-9C-J4x"/>
+                                            <constraint firstAttribute="height" constant="46" id="7Nv-qJ-meG"/>
                                         </constraints>
-                                        <state key="normal" image="chat"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="chat" symbolScale="large"/>
+                                        </state>
                                         <state key="selected" image="chatSelected"/>
                                         <connections>
                                             <action selector="tabButtonTapped:" destination="z2u-Bg-D6m" eventType="touchUpInside" id="Kox-7C-O27"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCHEDULED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Hb-8J-IUu">
+                                        <rect key="frame" x="263" y="54" width="76" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EVENTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gyp-7d-FV6">
+                                        <rect key="frame" x="79" y="54" width="49" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="lMm-bx-w7F" firstAttribute="top" secondItem="y0z-Sm-d60" secondAttribute="top" constant="19" id="4ub-UC-cdm"/>
-                                    <constraint firstItem="k8B-zk-Ojm" firstAttribute="centerX" secondItem="y0z-Sm-d60" secondAttribute="centerX" multiplier="0.165" id="6fP-rM-Jeu"/>
-                                    <constraint firstItem="4Hb-8J-IUu" firstAttribute="centerX" secondItem="lMm-bx-w7F" secondAttribute="centerX" id="Lp7-af-ueH"/>
-                                    <constraint firstItem="4Hb-8J-IUu" firstAttribute="width" secondItem="y0z-Sm-d60" secondAttribute="width" multiplier="0.099" id="NcU-iT-mBk"/>
-                                    <constraint firstAttribute="height" constant="71" id="Sfc-NU-9H7"/>
-                                    <constraint firstItem="gyp-7d-FV6" firstAttribute="centerX" secondItem="k8B-zk-Ojm" secondAttribute="centerX" id="oxG-0d-ZUt"/>
-                                    <constraint firstItem="gyp-7d-FV6" firstAttribute="top" secondItem="k8B-zk-Ojm" secondAttribute="bottom" constant="2" id="qda-8K-Zdw"/>
-                                    <constraint firstItem="gyp-7d-FV6" firstAttribute="width" secondItem="y0z-Sm-d60" secondAttribute="width" multiplier="0.099" id="u3f-6N-Ldv"/>
-                                    <constraint firstItem="4Hb-8J-IUu" firstAttribute="top" secondItem="lMm-bx-w7F" secondAttribute="bottom" constant="2" id="xtG-kO-Su2"/>
-                                    <constraint firstItem="lMm-bx-w7F" firstAttribute="centerX" secondItem="y0z-Sm-d60" secondAttribute="centerX" multiplier="0.55" id="y5e-bQ-BuW"/>
-                                    <constraint firstItem="k8B-zk-Ojm" firstAttribute="top" secondItem="y0z-Sm-d60" secondAttribute="top" constant="19" id="yva-mO-7aB"/>
+                                    <constraint firstItem="lMm-bx-w7F" firstAttribute="top" secondItem="y0z-Sm-d60" secondAttribute="top" id="0uR-fB-BZo"/>
+                                    <constraint firstItem="k8B-zk-Ojm" firstAttribute="top" secondItem="y0z-Sm-d60" secondAttribute="top" id="3Yv-Os-qkn"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Hb-8J-IUu" secondAttribute="bottom" constant="7.5" id="OvH-jz-YA2"/>
+                                    <constraint firstAttribute="trailing" secondItem="lMm-bx-w7F" secondAttribute="trailing" constant="90" id="RCQ-Jk-s6d"/>
+                                    <constraint firstAttribute="height" constant="76" id="Sfc-NU-9H7"/>
+                                    <constraint firstItem="gyp-7d-FV6" firstAttribute="leading" secondItem="y0z-Sm-d60" secondAttribute="leading" constant="79" id="ezs-BX-9e6"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Hb-8J-IUu" secondAttribute="trailing" constant="75" id="fTA-wC-8oI"/>
+                                    <constraint firstItem="k8B-zk-Ojm" firstAttribute="leading" secondItem="y0z-Sm-d60" secondAttribute="leading" constant="80" id="muD-xi-cbk"/>
+                                    <constraint firstItem="gyp-7d-FV6" firstAttribute="top" secondItem="k8B-zk-Ojm" secondAttribute="bottom" constant="8" symbolic="YES" id="xEa-pa-0Hz"/>
+                                    <constraint firstItem="4Hb-8J-IUu" firstAttribute="top" secondItem="lMm-bx-w7F" secondAttribute="bottom" constant="8" symbolic="YES" id="xpi-Kr-SIr"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -124,13 +117,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0NC-f4-Ffb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="-350"/>
+            <point key="canvasLocation" x="282.60869565217394" y="-350.22321428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vdx-9X-Bzg">
             <objects>
                 <navigationController id="bld-mt-Kit" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NlL-ou-b9r" customClass="APNavigationBar" customModule="Postagic" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NlL-ou-b9r" customClass="APNavigationBar" customModule="G_Stream" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -145,7 +138,7 @@
         <!--View Controller-->
         <scene sceneID="w3d-hU-U1d">
             <objects>
-                <viewController id="iPb-Ri-4MM" customClass="ViewController" customModule="Postagic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iPb-Ri-4MM" customClass="ViewController" customModule="G_Stream" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="835-f7-ZnT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -171,7 +164,7 @@
         <scene sceneID="0rX-oO-oxa">
             <objects>
                 <navigationController id="FAy-Kv-Ttm" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wMz-YU-cFI" customClass="APNavigationBar" customModule="Postagic" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wMz-YU-cFI" customClass="APNavigationBar" customModule="G_Stream" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -210,9 +203,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chat" width="29" height="29"/>
-        <image name="chatSelected" width="29" height="29"/>
-        <image name="home" width="29" height="29"/>
-        <image name="homeSelected" width="29" height="29"/>
+        <image name="chat" width="256" height="256"/>
+        <image name="chatSelected" width="256" height="256"/>
+        <image name="home" width="256" height="256"/>
+        <image name="homeSelected" width="256" height="256"/>
     </resources>
 </document>

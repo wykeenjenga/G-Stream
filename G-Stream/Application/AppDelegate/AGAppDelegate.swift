@@ -10,7 +10,7 @@ import UIKit
 @UIApplicationMain
 class AGAppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate{
     
-    var window: UIWindow? = UIWindow(frame: UIScreen.main.bounds)
+    var window: UIWindow? //= UIWindow(frame: UIScreen.main.bounds)
     let appDiContainer = AGDIContainer()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool{
@@ -34,21 +34,25 @@ class AGAppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate{
             
             var viewControllers = [UIViewController]()
             
-            let homeVC = Accessors.AppDelegate.delegate.appDiContainer.makeLiveDIContainer().makeLiveViewController()
-            let navHomeVC = UINavigationController(rootViewController: homeVC)
-            viewControllers.append(navHomeVC)
+            let liveEventsVC = Accessors.AppDelegate.delegate.appDiContainer.makeLiveDIContainer().makeLiveViewController()
+            let navLiveEventsVC = UINavigationController(rootViewController: liveEventsVC)
+            viewControllers.append(navLiveEventsVC)
             
-            let chatListVC = Accessors.AppDelegate.delegate.appDiContainer.makeScheduleDIContainer().makeScheduleViewController()
-            let navChatVC = UINavigationController(rootViewController: chatListVC)
-            viewControllers.append(navChatVC)
+            let scheduledEventsVC = Accessors.AppDelegate.delegate.appDiContainer.makeScheduleDIContainer().makeScheduleViewController()
+            let navScheduledEventsVC = UINavigationController(rootViewController: scheduledEventsVC)
+            viewControllers.append(navScheduledEventsVC)
+            
+            tabBarController.viewControllers = viewControllers
             
             if UIApplication.shared.keyWindow == nil {
                 self.window?.rootViewController = tabBarController
                 self.window?.makeKeyAndVisible()
+            } else {
+                UIApplication.shared.keyWindow?.setRootViewController(tabBarController, options: UIWindow.TransitionOptions(direction: .toRight))
             }
             
         } else {
-            assertionFailure("Could not load the tabBar")
+            assertionFailure("Could not load the home tabBar")
         }
     }
 
@@ -57,6 +61,8 @@ class AGAppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate{
             if UIApplication.shared.keyWindow == nil {
                 self.window?.rootViewController = onboarding
                 self.window?.makeKeyAndVisible()
+            }else{
+                UIApplication.shared.keyWindow?.setRootViewController(onboarding, options: UIWindow.TransitionOptions(direction: .toRight))
             }
         } else {
             assertionFailure("Could not load onboarding screen")

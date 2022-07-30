@@ -40,18 +40,20 @@ class AGHardwallModule: UIViewController {
     @IBAction func getStarted(_ sender: Any) {
         print("Get Started")
         
-        let friendVC = Accessors.AppDelegate.delegate.appDiContainer.makeLiveDIContainer().makeLiveViewController()
-        let navigationController = UINavigationController(rootViewController: friendVC)
-        navigationController.modalPresentationStyle = .fullScreen
+//        let friendVC = Accessors.AppDelegate.delegate.appDiContainer.makeLiveDIContainer().makeLiveViewController()
+//        let navigationController = UINavigationController(rootViewController: friendVC)
+//        navigationController.modalPresentationStyle = .fullScreen
+//
+//        let transition = CATransition()
+//        transition.duration = 0.6
+//        transition.type = CATransitionType.push
+//        transition.subtype = CATransitionSubtype.fromRight
+//        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+//        view.window!.layer.add(transition, forKey: kCATransition)
+//
+//        self.present(navigationController, animated: true, completion: nil)
         
-        let transition = CATransition()
-        transition.duration = 0.6
-        transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromRight
-        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-        view.window!.layer.add(transition, forKey: kCATransition)
-        
-        self.present(navigationController, animated: true, completion: nil)
+        Accessors.AppDelegate.delegate.navigateToHome()
     }
     
     override func viewWillAppear(_ animated: Bool) {
