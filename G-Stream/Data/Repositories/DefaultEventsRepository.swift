@@ -9,7 +9,7 @@
 import Foundation
 import Mapper
 
-final class DefaultUserRepository {
+final class DefaultEventsRepository {
     
     private let dataTransferService: DataTransfer
     
@@ -18,9 +18,12 @@ final class DefaultUserRepository {
     }
 }
 
-extension DefaultUserRepository: EventsRepositoryInterface {
+extension DefaultEventsRepository: EventsRepositoryInterface {
+    
     func fetchLiveEvents(completion: @escaping (Result<AGLiveEvents, Error>) -> Void) -> Cancellable? {
+        
         let endPoint = AGAPIEndPoints.Requests.getLiveEvents()
+        
         return self.dataTransferService.request(with: endPoint) { (response: Result<AGLiveEvents, Error>) in
             switch response {
             case .success(let event):

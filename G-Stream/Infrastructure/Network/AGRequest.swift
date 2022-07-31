@@ -48,6 +48,7 @@ public protocol AGRequestable {
 }
 
 extension AGRequestable {
+    
     private func url(with configuration: APNetworkConfigurable) throws -> URL {
         //Preping up the endPoint.
         let baseURL = configuration.baseURL.absoluteString.last != "/" ? configuration.baseURL.absoluteString + "/" : configuration.baseURL.absoluteString

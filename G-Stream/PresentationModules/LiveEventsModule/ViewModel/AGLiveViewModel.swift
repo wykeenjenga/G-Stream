@@ -10,24 +10,18 @@ import Foundation
 
 enum AGLiveViewModelRoute {
     case initial
-    case openProfileDetail(userId: String)
+    case back
+    case error
     case activity(loading: Bool)
-    case showErrorAlert
 }
 
 protocol AGLiveViewModelInput {
-    func triggerGetAllComment()
-    func triggerAddFeedComment(text: String)
-    func clearPreviousHome()
-    func didSelect(index: Int)
+    func triggerGetAllLiveEvents()
 }
 
 protocol AGLiveViewModelOutput {
-//    var previousHomees: Dynamic<[String]> { get set }
-//    var feedList: Dynamic<[Int]> { get set }
-//    var commentId: Dynamic<String> {get set}
-//    var userIdentifier: Dynamic<String> {get set}
-//    var feedIdentifier: Dynamic<String> {get set}
+    var eventsData: Dynamic<AGLiveEventsModelData> { get set }
+    var route: Dynamic<AGLiveViewModelRoute> { get set }
 }
 
 protocol AGLiveViewModel: AGLiveViewModelInput, AGLiveViewModelOutput {
@@ -36,36 +30,31 @@ protocol AGLiveViewModel: AGLiveViewModelInput, AGLiveViewModelOutput {
 
 final class DefaultAGLiveViewModel: AGLiveViewModel {
     
-//    var feedId: Dynamic<String>
-//    var commentId: Dynamic<String> = Dynamic("")
-//    var userIdentifier: Dynamic<String> = Dynamic("")
-//    var feedIdentifier: Dynamic<String> = Dynamic("")
-//    var feedList: Dynamic<[Int]> = Dynamic([])
+    var eventsData: Dynamic<AGLiveEventsModelData> = Dynamic(AGLiveEventsModelData())
+    var route: Dynamic<AGLiveViewModelRoute> = Dynamic(.initial)
     
-    private var liveEventsUseCase: liv
+    var liveEventsUseCase: LiveEventsUseCase
     
-    init(liveEventsUsecase: AddFeedLikeUseCase) {
-        self.profile = Dynamic(profile)
+    init(liveEventsUseCase: LiveEventsUseCase) {
+        self.liveEventsUseCase = liveEventsUseCase
     }
-    
 }
 
-extension AGLiveViewModel {
+extension AGLiveViewModel{
     
-    func triggerGetAllComment() {
-    }
-    
-    //add comment
-    func triggerAddFeedComment(text: String) {
-    }
-
-
-    func clearPreviousHome() {
+    func triggerGetAllLiveEvents() {
+        route.value = .activity(loading: true)
+        AGAPIGateway.door().getLiveEvents { (events, error) in
+            if error != nil{
+                self.route.value = .error
+            }else{
+                var liveEvents = AGLiveEventsModelData()
+                liveEvents.liveEvents = events
+                self.eventsData.value = liveEvents
+                
+                self.route.value = .activity(loading: false)
+            }
+        }
         
     }
-    
-    func didSelect(index: Int) {
-        
-    }
-    
 }

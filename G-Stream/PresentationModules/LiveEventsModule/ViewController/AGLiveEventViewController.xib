@@ -5,18 +5,12 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Recoleta-Bold.ttf">
-            <string>Recoleta-Bold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGLiveEventViewController" customModule="G_Stream" customModuleProvider="target">
             <connections>
-                <outlet property="liveEventsTabelView" destination="4uy-Ks-hd3" id="dSY-sI-iba"/>
+                <outlet property="liveEventsTable" destination="4uy-Ks-hd3" id="dSY-sI-iba"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,34 +19,33 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Ks-hd3">
-                    <rect key="frame" x="20" y="94.5" width="374" height="767.5"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4J7-fH-s2S">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="866"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4uy-Ks-hd3">
+                    <rect key="frame" x="20" y="44" width="374" height="818"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Events" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fby-Yo-Tqs">
-                    <rect key="frame" x="20" y="44" width="374" height="38.5"/>
-                    <fontDescription key="fontDescription" name="Recoleta-Bold" family="Recoleta" pointSize="28"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Fby-Yo-Tqs" secondAttribute="trailing" constant="20" id="3mV-IA-s3i"/>
-                <constraint firstItem="Fby-Yo-Tqs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7J0-aJ-YqQ"/>
-                <constraint firstItem="4uy-Ks-hd3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Syw-15-UWD"/>
-                <constraint firstItem="Fby-Yo-Tqs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="e6e-KI-TLc"/>
-                <constraint firstItem="4uy-Ks-hd3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="lwx-kM-cNA"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4uy-Ks-hd3" secondAttribute="trailing" constant="20" id="mSM-3h-d7F"/>
-                <constraint firstItem="4uy-Ks-hd3" firstAttribute="top" secondItem="Fby-Yo-Tqs" secondAttribute="bottom" constant="12" id="qM6-pW-70a"/>
+                <constraint firstItem="4uy-Ks-hd3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="7Uy-oa-Ob2"/>
+                <constraint firstItem="4uy-Ks-hd3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="LTU-AF-pSa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4uy-Ks-hd3" secondAttribute="trailing" constant="20" id="Uwh-wj-O4p"/>
+                <constraint firstItem="4J7-fH-s2S" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="aTE-mg-Fvm"/>
+                <constraint firstItem="4J7-fH-s2S" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cna-mV-gKs"/>
+                <constraint firstItem="4J7-fH-s2S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="jFJ-ZX-BdT"/>
+                <constraint firstItem="4uy-Ks-hd3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="lie-1a-XhC"/>
+                <constraint firstAttribute="bottom" secondItem="4J7-fH-s2S" secondAttribute="bottom" constant="30" id="zys-x6-h3I"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="11.383928571428571"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="background" width="283" height="526"/>
     </resources>
 </document>

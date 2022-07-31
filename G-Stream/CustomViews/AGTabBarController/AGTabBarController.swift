@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class AGTabBarController: UIViewController{
+    @IBOutlet weak var menuBtn: AGBindingButton!
+    @IBOutlet weak var headerTitle: UILabel!
     
     @IBOutlet private var tabTitles: [UILabel]!
     @IBOutlet private var tabs: [AGBindingButton]!
@@ -48,6 +50,7 @@ class AGTabBarController: UIViewController{
             firstTabTitle.textColor = UIColor(named: "orange")
         }
         AGTabBarController.shared = self
+        
     }
     
     @IBAction func tabButtonTapped(_ sender: UIButton) {
@@ -85,8 +88,7 @@ class AGTabBarController: UIViewController{
         print("....SELECTED TAB is>>>|\(sender.tag)")
         if selectedTab == sender.tag {
             let vc = viewControllers[selectedTab]
-            if let viewC = vc as? UINavigationController, let home = viewC.viewControllers[0] as? AGLiveEventViewController, home.liveEventsTabelView.contentOffset.y != 0 {
-                //home.updateFeed(isLoading: false)
+            if let viewC = vc as? UINavigationController, let home = viewC.viewControllers[0] as? AGLiveEventViewController, home.liveEventsTable.contentOffset.y != 0 {
             }
             vc.navigationController?.popToRootViewController(animated: true)
         } else {
@@ -114,6 +116,14 @@ class AGTabBarController: UIViewController{
                         tabTitle.textColor = Theme.currentTheme().textColor
                     }
                 }
+            }
+            
+            headerTitle.layer.removeAllAnimations()
+            
+            if sender.tag == 0{
+                self.headerTitle.text = "Live Matches"
+            }else{
+                self.headerTitle.text = "Scheduled Matches"
             }
         }
     }

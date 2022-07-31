@@ -26,10 +26,10 @@ final public class DefaultNetworkErrorLogger: NetworkErrorLogger {
         print("headers: \(request.allHTTPHeaderFields!)")
         print("method: \(request.httpMethod!)")
         if let httpBody = request.httpBody, let result = ((try? JSONSerialization.jsonObject(with: httpBody, options: []) as? [String: AnyObject]) as [String: AnyObject]??) {
-            //print("body: \(String(describing: result))")
+            print("body: \(String(describing: result))")
         }
         if let httpBody = request.httpBody, let resultString = String(data: httpBody, encoding: .utf8) {
-            //print("body: \(String(describing: resultString))")
+            print("body: \(String(describing: resultString))")
         }
         #endif
     }

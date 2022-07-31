@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Recoleta-SemiBold.ttf">
+            <string>Recoleta-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="130" id="KGk-i7-Jjw" customClass="AGLiveEventViewCell" customModule="G_Stream" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEj-IC-APb">
+                        <rect key="frame" x="0.0" y="1" width="320" height="128"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeSelected" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kcx-91-ynm">
+                                <rect key="frame" x="8" y="14" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5a3-Wt-mYn"/>
+                                    <constraint firstAttribute="height" constant="100" id="pvL-pd-VfH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.CornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arsenal Vs Man United" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg6-Td-Tqh">
+                                <rect key="frame" x="116" y="14" width="196" height="22"/>
+                                <fontDescription key="fontDescription" name="Recoleta-SemiBold" family="Recoleta" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="liveTableViewCell" text="1800 hr EAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" showsExpansionTextWhenTruncated="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZaY-IS-yZo">
+                                <rect key="frame" x="116" y="97" width="196" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPL" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Rz-ga-QxK">
+                                <rect key="frame" x="116" y="44" width="196" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="pg6-Td-Tqh" secondAttribute="trailing" constant="8" id="2OK-Zx-GMT"/>
+                            <constraint firstAttribute="trailing" secondItem="9Rz-ga-QxK" secondAttribute="trailing" constant="8" id="5SK-P3-RtN"/>
+                            <constraint firstItem="ZaY-IS-yZo" firstAttribute="leading" secondItem="Kcx-91-ynm" secondAttribute="trailing" constant="8" symbolic="YES" id="BnR-S3-Xoa"/>
+                            <constraint firstItem="pg6-Td-Tqh" firstAttribute="leading" secondItem="Kcx-91-ynm" secondAttribute="trailing" constant="8" symbolic="YES" id="FeT-Am-tmJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Kcx-91-ynm" secondAttribute="bottom" constant="14" id="Mvx-iR-Gds"/>
+                            <constraint firstItem="9Rz-ga-QxK" firstAttribute="top" secondItem="pg6-Td-Tqh" secondAttribute="bottom" constant="8" symbolic="YES" id="RhV-E2-5FY"/>
+                            <constraint firstItem="pg6-Td-Tqh" firstAttribute="top" secondItem="iEj-IC-APb" secondAttribute="top" constant="14" id="aNh-Sd-16G"/>
+                            <constraint firstAttribute="bottom" secondItem="ZaY-IS-yZo" secondAttribute="bottom" constant="14" id="ahY-zn-Yhb"/>
+                            <constraint firstItem="Kcx-91-ynm" firstAttribute="top" secondItem="iEj-IC-APb" secondAttribute="top" constant="14" id="bmV-ad-Ymm"/>
+                            <constraint firstAttribute="trailing" secondItem="ZaY-IS-yZo" secondAttribute="trailing" constant="8" id="kAO-qp-hYr"/>
+                            <constraint firstItem="Kcx-91-ynm" firstAttribute="leading" secondItem="iEj-IC-APb" secondAttribute="leading" constant="8" id="rel-cE-pBs"/>
+                            <constraint firstItem="9Rz-ga-QxK" firstAttribute="leading" secondItem="Kcx-91-ynm" secondAttribute="trailing" constant="8" symbolic="YES" id="uhL-XP-4dQ"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <integer key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="iEj-IC-APb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="JYo-EV-ka2"/>
+                    <constraint firstItem="iEj-IC-APb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="kgL-dv-igB"/>
+                    <constraint firstAttribute="bottom" secondItem="iEj-IC-APb" secondAttribute="bottom" constant="1" id="rpS-ZY-dg6"/>
+                    <constraint firstAttribute="trailing" secondItem="iEj-IC-APb" secondAttribute="trailing" id="zyV-7v-hSB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="league" destination="9Rz-ga-QxK" id="566-Am-CPf"/>
+                <outlet property="leagueImage" destination="Kcx-91-ynm" id="tlk-NT-gwN"/>
+                <outlet property="teams" destination="pg6-Td-Tqh" id="8bL-pN-Yuh"/>
+                <outlet property="time" destination="ZaY-IS-yZo" id="0sc-YV-akx"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="112.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="homeSelected" width="256" height="256"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

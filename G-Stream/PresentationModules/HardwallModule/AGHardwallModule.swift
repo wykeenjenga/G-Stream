@@ -17,6 +17,8 @@ class AGHardwallModule: UIViewController {
     @IBOutlet var vTWO: UIView!
     @IBOutlet var vTHREE: UIView!
     
+    @IBOutlet weak var getStartedBtn: UIButton!
+    
     var pos = 0
     
     let titles: [String] = [OnboardingTitles.stream, OnboardingTitles.schedule, OnboardingTitles.fans]
@@ -39,26 +41,13 @@ class AGHardwallModule: UIViewController {
     
     @IBAction func getStarted(_ sender: Any) {
         print("Get Started")
-        
-//        let friendVC = Accessors.AppDelegate.delegate.appDiContainer.makeLiveDIContainer().makeLiveViewController()
-//        let navigationController = UINavigationController(rootViewController: friendVC)
-//        navigationController.modalPresentationStyle = .fullScreen
-//
-//        let transition = CATransition()
-//        transition.duration = 0.6
-//        transition.type = CATransitionType.push
-//        transition.subtype = CATransitionSubtype.fromRight
-//        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-//        view.window!.layer.add(transition, forKey: kCATransition)
-//
-//        self.present(navigationController, animated: true, completion: nil)
-        
         Accessors.AppDelegate.delegate.navigateToHome()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.animateViews()
         self.initSwipe()
+        self.getStartedBtn.isEnabled = false
     }
     
     func initSwipe(){
@@ -79,6 +68,10 @@ class AGHardwallModule: UIViewController {
            }else{
                self.setOnBoardingValues(pos: pos)
            }
+           
+           if pos == 2{
+               self.getStartedBtn.isEnabled = true
+           }
        }
         
        if sender.direction == .right {
@@ -92,11 +85,9 @@ class AGHardwallModule: UIViewController {
     }
     
     func setOnBoardingValues(pos: Int){
-        //print("position is = \(pos)")
         self.image.image = images[pos]
         self.footTitle.text = titles[pos]
         self.footNote.text = footNotes[pos]
-        
         self.observerIndicator()
         self.animateViews()
     }

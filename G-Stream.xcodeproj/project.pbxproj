@@ -45,13 +45,22 @@
 		CE1832372894E3AB0029C91D /* DefaultEventsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1832362894E3AB0029C91D /* DefaultEventsRepository.swift */; };
 		CE18323B2894E4240029C91D /* EventsRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18323A2894E4240029C91D /* EventsRepositoryInterface.swift */; };
 		CE18323E2894E5F90029C91D /* AGAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18323D2894E5F90029C91D /* AGAPIGateway.swift */; };
-		CE1832412894E6C70029C91D /* AGDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1832402894E6C70029C91D /* AGDatabase.swift */; };
 		CE1832442894ED9A0029C91D /* LiveEventsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1832432894ED9A0029C91D /* LiveEventsUseCase.swift */; };
+		CE18324728950E680029C91D /* AGDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18324628950E680029C91D /* AGDatabase.swift */; };
+		CE18324A28953BAA0029C91D /* HUDLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18324928953BAA0029C91D /* HUDLoaderProtocol.swift */; };
+		CE18324D28954C880029C91D /* AGLiveEventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE18324B28954C880029C91D /* AGLiveEventViewCell.xib */; };
+		CE18324E28954C880029C91D /* AGLiveEventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18324C28954C880029C91D /* AGLiveEventViewCell.swift */; };
+		CE183251289550FA0029C91D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE183250289550FA0029C91D /* ImageDownloader.swift */; };
+		CE183254289557740029C91D /* AGCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE183253289557740029C91D /* AGCustomView.swift */; };
+		CE18325728956BC80029C91D /* AGAppPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18325628956BC80029C91D /* AGAppPlayer.swift */; };
+		CE18325928956BD40029C91D /* AGVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18325828956BD40029C91D /* AGVideoPlayerViewController.swift */; };
+		CE18325E2895A68E0029C91D /* AGScheduledEventsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18325C2895A68E0029C91D /* AGScheduledEventsViewCell.swift */; };
+		CE18325F2895A68E0029C91D /* AGScheduledEventsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE18325D2895A68E0029C91D /* AGScheduledEventsViewCell.xib */; };
+		CE1832622895A7950029C91D /* AGScheduledViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1832612895A7950029C91D /* AGScheduledViewModel.swift */; };
+		CE1832642895ADB80029C91D /* ScheduledEventsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1832632895ADB80029C91D /* ScheduledEventsUseCase.swift */; };
 		CE4268BB2893D20600158C26 /* AGBindingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4268BA2893D20600158C26 /* AGBindingButton.swift */; };
 		CE4268BE2893D80F00158C26 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4268BD2893D80F00158C26 /* Theme.swift */; };
 		CE628FE528932291006C3552 /* AGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FE428932291006C3552 /* AGTabBarController.swift */; };
-		CE628FE8289325EB006C3552 /* AGLiveEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FE6289325EB006C3552 /* AGLiveEventsTableViewCell.swift */; };
-		CE628FE9289325EB006C3552 /* AGLiveEventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE628FE7289325EB006C3552 /* AGLiveEventsTableViewCell.xib */; };
 		CE628FF028932FAD006C3552 /* AGLiveEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FEE28932FAD006C3552 /* AGLiveEventViewController.swift */; };
 		CE628FF128932FAD006C3552 /* AGLiveEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE628FEF28932FAD006C3552 /* AGLiveEventViewController.xib */; };
 		CE628FF32893A985006C3552 /* AGLiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FF22893A985006C3552 /* AGLiveViewModel.swift */; };
@@ -136,13 +145,22 @@
 		CE1832362894E3AB0029C91D /* DefaultEventsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultEventsRepository.swift; sourceTree = "<group>"; };
 		CE18323A2894E4240029C91D /* EventsRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRepositoryInterface.swift; sourceTree = "<group>"; };
 		CE18323D2894E5F90029C91D /* AGAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAPIGateway.swift; sourceTree = "<group>"; };
-		CE1832402894E6C70029C91D /* AGDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGDatabase.swift; sourceTree = "<group>"; };
 		CE1832432894ED9A0029C91D /* LiveEventsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventsUseCase.swift; sourceTree = "<group>"; };
+		CE18324628950E680029C91D /* AGDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGDatabase.swift; sourceTree = "<group>"; };
+		CE18324928953BAA0029C91D /* HUDLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLoaderProtocol.swift; sourceTree = "<group>"; };
+		CE18324B28954C880029C91D /* AGLiveEventViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGLiveEventViewCell.xib; sourceTree = "<group>"; };
+		CE18324C28954C880029C91D /* AGLiveEventViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGLiveEventViewCell.swift; sourceTree = "<group>"; };
+		CE183250289550FA0029C91D /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		CE183253289557740029C91D /* AGCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGCustomView.swift; sourceTree = "<group>"; };
+		CE18325628956BC80029C91D /* AGAppPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGAppPlayer.swift; sourceTree = "<group>"; };
+		CE18325828956BD40029C91D /* AGVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGVideoPlayerViewController.swift; sourceTree = "<group>"; };
+		CE18325C2895A68E0029C91D /* AGScheduledEventsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduledEventsViewCell.swift; sourceTree = "<group>"; };
+		CE18325D2895A68E0029C91D /* AGScheduledEventsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGScheduledEventsViewCell.xib; sourceTree = "<group>"; };
+		CE1832612895A7950029C91D /* AGScheduledViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduledViewModel.swift; sourceTree = "<group>"; };
+		CE1832632895ADB80029C91D /* ScheduledEventsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEventsUseCase.swift; sourceTree = "<group>"; };
 		CE4268BA2893D20600158C26 /* AGBindingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGBindingButton.swift; sourceTree = "<group>"; };
 		CE4268BD2893D80F00158C26 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CE628FE428932291006C3552 /* AGTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGTabBarController.swift; sourceTree = "<group>"; };
-		CE628FE6289325EB006C3552 /* AGLiveEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGLiveEventsTableViewCell.swift; sourceTree = "<group>"; };
-		CE628FE7289325EB006C3552 /* AGLiveEventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGLiveEventsTableViewCell.xib; sourceTree = "<group>"; };
 		CE628FEE28932FAD006C3552 /* AGLiveEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGLiveEventViewController.swift; sourceTree = "<group>"; };
 		CE628FEF28932FAD006C3552 /* AGLiveEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGLiveEventViewController.xib; sourceTree = "<group>"; };
 		CE628FF22893A985006C3552 /* AGLiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGLiveViewModel.swift; sourceTree = "<group>"; };
@@ -299,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				CE11212A2892B1BE0046619D /* AGConstants.swift */,
+				CE18324F289550B40029C91D /* ImageDownloader */,
 				CE62900F2893B4B9006C3552 /* Protocols */,
 			);
 			path = Utils;
@@ -317,7 +336,7 @@
 		CE11210328928E7D0046619D /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				CE18323F2894E68F0029C91D /* API Accessors */,
+				CE18324528950E560029C91D /* Data */,
 				CE18323C2894E5D50029C91D /* API Gateway */,
 				CE4268BC2893D80F00158C26 /* Themes */,
 				CE11211028929FB80046619D /* Accessors */,
@@ -328,8 +347,9 @@
 		CE11210428928E860046619D /* PresentationModules */ = {
 			isa = PBXGroup;
 			children = (
-				CE62901B2893BD1E006C3552 /* ScheduleModule */,
 				CE6290142893B6F3006C3552 /* BaseViewController */,
+				CE18325528956BB10029C91D /* VideoPlayerModule */,
+				CE62901B2893BD1E006C3552 /* ScheduleEventsModule */,
 				CE628FDB28931BBB006C3552 /* LiveEventsModule */,
 				CE11210F28929B390046619D /* HardwallModule */,
 			);
@@ -339,6 +359,7 @@
 		CE11210528928E970046619D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				CE183252289557590029C91D /* AGDeginatedView */,
 				CE628FE328932272006C3552 /* AGTabBarController */,
 			);
 			path = CustomViews;
@@ -489,20 +510,72 @@
 			path = "API Gateway";
 			sourceTree = "<group>";
 		};
-		CE18323F2894E68F0029C91D /* API Accessors */ = {
-			isa = PBXGroup;
-			children = (
-				CE1832402894E6C70029C91D /* AGDatabase.swift */,
-			);
-			path = "API Accessors";
-			sourceTree = "<group>";
-		};
 		CE1832422894ED7B0029C91D /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				CE1832432894ED9A0029C91D /* LiveEventsUseCase.swift */,
+				CE1832632895ADB80029C91D /* ScheduledEventsUseCase.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		CE18324528950E560029C91D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CE18324628950E680029C91D /* AGDatabase.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CE18324F289550B40029C91D /* ImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				CE183250289550FA0029C91D /* ImageDownloader.swift */,
+			);
+			path = ImageDownloader;
+			sourceTree = "<group>";
+		};
+		CE183252289557590029C91D /* AGDeginatedView */ = {
+			isa = PBXGroup;
+			children = (
+				CE183253289557740029C91D /* AGCustomView.swift */,
+			);
+			path = AGDeginatedView;
+			sourceTree = "<group>";
+		};
+		CE18325528956BB10029C91D /* VideoPlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				CE18325828956BD40029C91D /* AGVideoPlayerViewController.swift */,
+				CE18325628956BC80029C91D /* AGAppPlayer.swift */,
+			);
+			path = VideoPlayerModule;
+			sourceTree = "<group>";
+		};
+		CE18325A2895A6360029C91D /* ViewController  */ = {
+			isa = PBXGroup;
+			children = (
+				CE62901C2893BD49006C3552 /* AGScheduleViewController.swift */,
+				CE62901D2893BD49006C3552 /* AGScheduleViewController.xib */,
+			);
+			path = "ViewController ";
+			sourceTree = "<group>";
+		};
+		CE18325B2895A64B0029C91D /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				CE18325C2895A68E0029C91D /* AGScheduledEventsViewCell.swift */,
+				CE18325D2895A68E0029C91D /* AGScheduledEventsViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		CE1832602895A77A0029C91D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE1832612895A7950029C91D /* AGScheduledViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CE4268B92893D1E200158C26 /* AGBindingButton */ = {
@@ -533,9 +606,9 @@
 		CE628FDB28931BBB006C3552 /* LiveEventsModule */ = {
 			isa = PBXGroup;
 			children = (
+				CE628FDC28931BC7006C3552 /* ViewModel */,
 				CE628FDE28931BE9006C3552 /* TableViewCell */,
 				CE628FDD28931BCF006C3552 /* ViewController */,
-				CE628FDC28931BC7006C3552 /* ViewModel */,
 			);
 			path = LiveEventsModule;
 			sourceTree = "<group>";
@@ -560,8 +633,8 @@
 		CE628FDE28931BE9006C3552 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				CE628FE6289325EB006C3552 /* AGLiveEventsTableViewCell.swift */,
-				CE628FE7289325EB006C3552 /* AGLiveEventsTableViewCell.xib */,
+				CE18324C28954C880029C91D /* AGLiveEventViewCell.swift */,
+				CE18324B28954C880029C91D /* AGLiveEventViewCell.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -626,6 +699,7 @@
 			children = (
 				CE6290122893B51F006C3552 /* APProtocols.swift */,
 				CE6290102893B4D0006C3552 /* StoryboardInstantiable.swift */,
+				CE18324928953BAA0029C91D /* HUDLoaderProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -638,13 +712,14 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
-		CE62901B2893BD1E006C3552 /* ScheduleModule */ = {
+		CE62901B2893BD1E006C3552 /* ScheduleEventsModule */ = {
 			isa = PBXGroup;
 			children = (
-				CE62901C2893BD49006C3552 /* AGScheduleViewController.swift */,
-				CE62901D2893BD49006C3552 /* AGScheduleViewController.xib */,
+				CE1832602895A77A0029C91D /* ViewModel */,
+				CE18325B2895A64B0029C91D /* TableViewCell */,
+				CE18325A2895A6360029C91D /* ViewController  */,
 			);
-			path = ScheduleModule;
+			path = ScheduleEventsModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -763,13 +838,14 @@
 				CE1121262892A6AE0046619D /* RecoletaAlt-Medium.ttf in Resources */,
 				CE1121252892A6AE0046619D /* Recoleta-SemiBold.ttf in Resources */,
 				CE1120DC28928CAA0046619D /* LaunchScreen.storyboard in Resources */,
-				CE628FE9289325EB006C3552 /* AGLiveEventsTableViewCell.xib in Resources */,
 				CE1121222892A6AE0046619D /* Recoleta-Bold.ttf in Resources */,
 				CE1120D928928CAA0046619D /* Assets.xcassets in Resources */,
+				CE18324D28954C880029C91D /* AGLiveEventViewCell.xib in Resources */,
 				CE1121242892A6AE0046619D /* RecoletaAlt-SemiBold.ttf in Resources */,
 				CE1121212892A6AE0046619D /* Recoleta-Regular.ttf in Resources */,
 				CE1832222894D4DD0029C91D /* TabBarAssets.xcassets in Resources */,
 				CE1121232892A6AE0046619D /* Recoleta-Medium.ttf in Resources */,
+				CE18325F2895A68E0029C91D /* AGScheduledEventsViewCell.xib in Resources */,
 				CE1121202892A6AE0046619D /* RecoletaAlt-Black.ttf in Resources */,
 				CE62901F2893BD49006C3552 /* AGScheduleViewController.xib in Resources */,
 				CE11211F2892A6AE0046619D /* RecoletaAlt-Bold.ttf in Resources */,
@@ -925,8 +1001,11 @@
 				CE1832442894ED9A0029C91D /* LiveEventsUseCase.swift in Sources */,
 				CE1832342894E2C30029C91D /* AGScheduledEvents.swift in Sources */,
 				CE62900C2893B35F006C3552 /* NetworkLogger.swift in Sources */,
+				CE183254289557740029C91D /* AGCustomView.swift in Sources */,
 				CE6290182893B80A006C3552 /* AGLiveDIContainer.swift in Sources */,
+				CE18324728950E680029C91D /* AGDatabase.swift in Sources */,
 				CE1832282894D9390029C91D /* AGExtension+UIViewController.swift in Sources */,
+				CE18325E2895A68E0029C91D /* AGScheduledEventsViewCell.swift in Sources */,
 				CE1832372894E3AB0029C91D /* DefaultEventsRepository.swift in Sources */,
 				CE6290132893B51F006C3552 /* APProtocols.swift in Sources */,
 				CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */,
@@ -939,15 +1018,19 @@
 				CE6290062893B2FA006C3552 /* DataTransferService.swift in Sources */,
 				CE628FF32893A985006C3552 /* AGLiveViewModel.swift in Sources */,
 				CE62900D2893B35F006C3552 /* NetworkConfiguration.swift in Sources */,
-				CE1832412894E6C70029C91D /* AGDatabase.swift in Sources */,
 				CE1832322894E14C0029C91D /* AGAPIEndPoints.swift in Sources */,
+				CE1832642895ADB80029C91D /* ScheduledEventsUseCase.swift in Sources */,
 				CE4268BE2893D80F00158C26 /* Theme.swift in Sources */,
+				CE18324A28953BAA0029C91D /* HUDLoaderProtocol.swift in Sources */,
 				CE62900E2893B35F006C3552 /* AGRequest.swift in Sources */,
 				CE62900B2893B35F006C3552 /* NetworkService.swift in Sources */,
 				CE18322C2894DB5D0029C91D /* AGExtension+UITableViewCell.swift in Sources */,
+				CE18324E28954C880029C91D /* AGLiveEventViewCell.swift in Sources */,
+				CE18325728956BC80029C91D /* AGAppPlayer.swift in Sources */,
 				CE628FE528932291006C3552 /* AGTabBarController.swift in Sources */,
 				CE18323B2894E4240029C91D /* EventsRepositoryInterface.swift in Sources */,
 				CE4268BB2893D20600158C26 /* AGBindingButton.swift in Sources */,
+				CE183251289550FA0029C91D /* ImageDownloader.swift in Sources */,
 				CE18322B2894DB5D0029C91D /* AGExtension+UITableView.swift in Sources */,
 				CE1832252894D8F40029C91D /* AGExtension+Window.swift in Sources */,
 				CE62901E2893BD49006C3552 /* AGScheduleViewController.swift in Sources */,
@@ -958,7 +1041,8 @@
 				CE11211228929FD60046619D /* Accessors.swift in Sources */,
 				CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */,
 				CE628FF92893AD69006C3552 /* AGError.swift in Sources */,
-				CE628FE8289325EB006C3552 /* AGLiveEventsTableViewCell.swift in Sources */,
+				CE1832622895A7950029C91D /* AGScheduledViewModel.swift in Sources */,
+				CE18325928956BD40029C91D /* AGVideoPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

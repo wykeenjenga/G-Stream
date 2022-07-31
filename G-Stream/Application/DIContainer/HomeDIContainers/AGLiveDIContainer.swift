@@ -21,15 +21,19 @@ final class AGLiveDIContainer {
     }
     
     func makeLiveViewController() -> AGLiveEventViewController {
-        return AGLiveEventViewController.create()
+        return AGLiveEventViewController.create(with: makeLiveEventsViewModel())
     }
     
-    private makeLiveEventsViewModel() -> AGLiveViewModel{
+    private func makeLiveEventsViewModel() -> AGLiveViewModel{
         return DefaultAGLiveViewModel(liveEventsUseCase: makeEventsRepository())
     }
     
-    private func makeEventsRepository() -> EventsRepositoryInterface {
-        return DefaultUserRepository(dataTransferService: self.dependencies.apiDataTransferService)
+    private func makeEventsRepository() -> LiveEventsUseCase {
+        return DefaultLiveEventsUseCase(eventRepository: makeAllEventsRepository())
+    }
+    
+    private func makeAllEventsRepository() -> EventsRepositoryInterface {
+        return DefaultEventsRepository(dataTransferService: self.dependencies.apiDataTransferService)
     }
     
     

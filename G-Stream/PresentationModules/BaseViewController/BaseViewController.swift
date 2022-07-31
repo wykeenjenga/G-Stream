@@ -8,4 +8,4 @@
 
 import UIKit
 
-public class BaseViewController: UIViewController, StoryboardInstantiable { }
+public class BaseViewController: UIViewController, HUDLoaderProtocol, StoryboardInstantiable { }

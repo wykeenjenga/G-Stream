@@ -35,3 +35,25 @@ struct OnboardingSubTitles{
 }
 
 
+struct Header{
+    static let headers: [String: String] = [
+              "Cookie": "signature=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZWM0ZGJmMDA1ZmJjMzBkZTBiYmYzYjUiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE1OTI2MzkyNTIsImV4cCI6MTYwMDQxNTI1Mn0.cQMOtMAiylR1mc_fQwH3RXCmBPnkupk33rGZSbmLfmY",
+              "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZWM0ZGJmMDA1ZmJjMzBkZTBiYmYzYjUiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE1OTI2MzkyNTIsImV4cCI6MTYwMDQxNTI1Mn0.cQMOtMAiylR1mc_fQwH3RXCmBPnkupk33rGZSbmLfmY"]
+}
+
+struct StreamingVideoURL{
+    static var videoUrl = ""
+}
+
+struct ConvertDate{
+    static func convert(dt: String) -> Date{
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+        let date = dateFormatter.date(from: dt)!
+
+        print(date)
+        return date
+    }
+}

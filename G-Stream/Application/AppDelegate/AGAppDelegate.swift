@@ -15,8 +15,8 @@ class AGAppDelegate: UIResponder, UIApplicationDelegate, UIWindowSceneDelegate{
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool{
         
-        //loadTheInitialScreen()
-        navigateToOnboarding()
+        loadTheInitialScreen()
+        
         return true
     }
     

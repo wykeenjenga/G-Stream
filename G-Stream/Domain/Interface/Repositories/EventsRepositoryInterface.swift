@@ -10,6 +10,6 @@ import Foundation
 import Mapper
 
 protocol EventsRepositoryInterface {
-    @discardableResult func fetchLiveEvents(completion: @escaping (Result<AGLiveEvents, Error>) -> Void) -> Cancellable?
-    @discardableResult func fetchScheduleEvents(completion: @escaping (Result<AGScheduledEvents, Error>) -> Void) -> Cancellable?
+    func fetchLiveEvents(completion: @escaping (Result<AGLiveEvents, Error>) -> Void) -> Cancellable?
+    func fetchScheduleEvents(completion: @escaping (Result<AGScheduledEvents, Error>) -> Void) -> Cancellable?
 }

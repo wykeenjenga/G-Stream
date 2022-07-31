@@ -14,14 +14,14 @@ struct AGScheduledEvents: Codable {
         case id = "id"
         case team = "title"
         case league = "subtitle"
-        case data = "date"
+        case date = "date"
         case imageUrl = "imageUrl"
     }
     
     var id: String?
     var team: String?
     var league: String?
-    var data: String?
+    var date: String?
     var imageUrl: String?
     
     init(from decoder: Decoder) throws {
@@ -29,7 +29,7 @@ struct AGScheduledEvents: Codable {
         id = try container.decodeIfPresent(String.self, forKey: .id)
         team = try container.decodeIfPresent(String.self, forKey: .team)
         league = try container.decodeIfPresent(String.self, forKey: .league)
-        data = try container.decodeIfPresent(String.self, forKey: .data)
+        date = try container.decodeIfPresent(String.self, forKey: .date)
         imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl)
     }
 }
@@ -39,7 +39,32 @@ extension AGScheduledEvents: AGMappable {
         id = map.optionalFrom("id")
         team = map.optionalFrom("team")
         league = map.optionalFrom("league")
-        data = map.optionalFrom("data")
+        date = map.optionalFrom("data")
         imageUrl = map.optionalFrom("imageUrl")
+    }
+}
+
+
+struct AGScheduledEventsModelData: Codable {
+    enum CodingKeys: String, CodingKey {
+        case scheduledEvents
+    }
+    
+    var scheduledEvents: [AGScheduledEvents]?
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        scheduledEvents = try container.decodeIfPresent([AGScheduledEvents].self, forKey: .scheduledEvents)
+    }
+    
+    init() {
+        scheduledEvents = []
+    }
+    
+}
+
+extension AGScheduledEventsModelData: AGMappable {
+    init(map: Mapper) {
+        scheduledEvents = map.optionalFrom("liveEvents")
     }
 }

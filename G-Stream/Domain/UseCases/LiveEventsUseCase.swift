@@ -9,7 +9,7 @@
 import Foundation
 
 protocol LiveEventsUseCase {
-    @discardableResult func execute(with userId: String, completion: @escaping (Result<AGLiveEvents, Error>) -> Void) -> Cancellable?
+    func execute(completion: @escaping (Result<AGLiveEvents, Error>) -> Void) -> Cancellable?
 }
 
 final class DefaultLiveEventsUseCase: LiveEventsUseCase {
@@ -20,7 +20,7 @@ final class DefaultLiveEventsUseCase: LiveEventsUseCase {
         self.eventRepository = eventRepository
     }
     
-    @discardableResult func execute(with userId: String, completion: @escaping (Result<AGLiveEvents, Error>) -> Void) -> Cancellable? {
+    func execute(completion: @escaping (Result<AGLiveEvents, Error>) -> Void) -> Cancellable? {
         return eventRepository.fetchLiveEvents(completion: completion)
     }
 }

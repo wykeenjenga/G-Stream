@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AGScheduleViewController" customModule="G_Stream" customModuleProvider="target">
+            <connections>
+                <outlet property="scheduledTableView" destination="jev-G0-8gy" id="i4K-l5-pxg"/>
+                <outlet property="view" destination="ium-W6-yQT" id="v7w-5n-AQz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ium-W6-yQT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ce-tT-E0n">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="866"/>
+                </imageView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jev-G0-8gy">
+                    <rect key="frame" x="20" y="44" width="374" height="818"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7wC-I2-aa2"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4Ce-tT-E0n" firstAttribute="leading" secondItem="7wC-I2-aa2" secondAttribute="leading" id="3QA-3l-jDi"/>
+                <constraint firstItem="4Ce-tT-E0n" firstAttribute="top" secondItem="ium-W6-yQT" secondAttribute="top" id="J6O-lP-gCN"/>
+                <constraint firstItem="jev-G0-8gy" firstAttribute="leading" secondItem="7wC-I2-aa2" secondAttribute="leading" constant="20" id="LlK-2B-AqA"/>
+                <constraint firstItem="jev-G0-8gy" firstAttribute="top" secondItem="7wC-I2-aa2" secondAttribute="top" id="NIB-9q-8zI"/>
+                <constraint firstItem="jev-G0-8gy" firstAttribute="bottom" secondItem="7wC-I2-aa2" secondAttribute="bottom" id="QBQ-Wp-AwQ"/>
+                <constraint firstItem="7wC-I2-aa2" firstAttribute="trailing" secondItem="jev-G0-8gy" secondAttribute="trailing" constant="20" id="X8B-px-pTA"/>
+                <constraint firstItem="4Ce-tT-E0n" firstAttribute="trailing" secondItem="7wC-I2-aa2" secondAttribute="trailing" id="XHz-LB-xsE"/>
+                <constraint firstAttribute="bottom" secondItem="4Ce-tT-E0n" secondAttribute="bottom" constant="30" id="mhD-rB-dEL"/>
+            </constraints>
+            <point key="canvasLocation" x="1192.753623188406" y="-404.46428571428572"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="283" height="526"/>
+    </resources>
+</document>

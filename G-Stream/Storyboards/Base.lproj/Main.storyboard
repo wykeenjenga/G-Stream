@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YDE-kN-hZo">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -51,7 +52,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Get Started">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <color key="baseBackgroundColor" name="maroon"/>
+                                            <color key="baseBackgroundColor" red="0.77618867160000005" green="0.1079762205" blue="0.1074553505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Sz-GW-gRX"/>
@@ -195,6 +196,7 @@ Best Tallent</string>
                     <connections>
                         <outlet property="footNote" destination="xdb-q2-QQf" id="pbf-QD-n9g"/>
                         <outlet property="footTitle" destination="1xQ-ax-gla" id="eKE-rp-CVR"/>
+                        <outlet property="getStartedBtn" destination="VDm-Bt-R8u" id="Ytx-t3-tcY"/>
                         <outlet property="image" destination="k7I-Ns-drw" id="XHP-Tb-1LK"/>
                         <outlet property="vONE" destination="6Wd-bb-BtO" id="8VI-lH-mmf"/>
                         <outlet property="vTHREE" destination="8wK-3a-l3c" id="P3n-Ra-ItT"/>

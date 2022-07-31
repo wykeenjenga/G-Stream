@@ -15,7 +15,7 @@ struct AGLiveEvents: Codable {
         case id = "id"
         case team = "title"
         case league = "subtitle"
-        case data = "date"
+        case date = "date"
         case imageUrl = "imageUrl"
         case videoUrl = "videoUrl"
     }
@@ -23,7 +23,7 @@ struct AGLiveEvents: Codable {
     var id: String?
     var team: String?
     var league: String?
-    var data: String?
+    var date: String?
     var imageUrl: String?
     var videoUrl: String?
     
@@ -32,7 +32,7 @@ struct AGLiveEvents: Codable {
         id = try container.decodeIfPresent(String.self, forKey: .id)
         team = try container.decodeIfPresent(String.self, forKey: .team)
         league = try container.decodeIfPresent(String.self, forKey: .league)
-        data = try container.decodeIfPresent(String.self, forKey: .data)
+        date = try container.decodeIfPresent(String.self, forKey: .date)
         imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl)
         videoUrl = try container.decodeIfPresent(String.self, forKey: .videoUrl)
     }
@@ -41,11 +41,34 @@ struct AGLiveEvents: Codable {
 extension AGLiveEvents: AGMappable {
     init(map: Mapper) {
         id = map.optionalFrom("id")
-        team = map.optionalFrom("team")
-        league = map.optionalFrom("league")
-        data = map.optionalFrom("data")
+        team = map.optionalFrom("title")
+        league = map.optionalFrom("subtitle")
+        date = map.optionalFrom("date")
         imageUrl = map.optionalFrom("imageUrl")
         videoUrl = map.optionalFrom("videoUrl")
     }
 }
 
+struct AGLiveEventsModelData: Codable {
+    enum CodingKeys: String, CodingKey {
+        case liveEvents
+    }
+    
+    var liveEvents: [AGLiveEvents]?
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        liveEvents = try container.decodeIfPresent([AGLiveEvents].self, forKey: .liveEvents)
+    }
+    
+    init() {
+        liveEvents = []
+    }
+    
+}
+
+extension AGLiveEventsModelData: AGMappable {
+    init(map: Mapper) {
+        liveEvents = map.optionalFrom("liveEvents")
+    }
+}
