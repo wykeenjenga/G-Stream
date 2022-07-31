@@ -10,20 +10,13 @@ import UIKit
 import AVFoundation
 
 class AGVideoPlayerViewController: UIView {
-
-    let indicator: UIActivityIndicatorView = {
-        let iv = UIActivityIndicatorView(style: .large)
-        iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.startAnimating()
-        return iv
-    }()
     
+    //MARK: - UIViews
     lazy var playVideoStream: UIButton = {
         let playBtn = UIButton(type: .custom)
         playBtn.setImage(#imageLiteral(resourceName: "play"), for: .normal)
         playBtn.translatesAutoresizingMaskIntoConstraints = false
         playBtn.tintColor = .white
-        playBtn.isHidden = true
         return playBtn
     }()
     
@@ -36,31 +29,12 @@ class AGVideoPlayerViewController: UIView {
         return closeBtn
     }()
     
-    var isPlaying = false
-    var videoPlayer: AVPlayer?
-    
-    @objc func handlePause() {
-        if isPlaying {
-            videoPlayer?.pause()
-            playVideoStream.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
-        }else{
-            videoPlayer?.play()
-            playVideoStream.setImage(#imageLiteral(resourceName: "play"), for: .normal)
-        }
-        isPlaying = !isPlaying
-    }
-    
-    @objc func handleClosePlayer() {
-        videoPlayer?.pause()
-        //let playerView = AGAppPlayer()
-        self.removeFromSuperview()
-        
-        let value = UIInterfaceOrientation.portrait.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
-        
-        Accessors.AppDelegate.delegate.navigateToHome()
-    }
-    
+    let indicator: UIActivityIndicatorView = {
+        let loadingIndicator = UIActivityIndicatorView(style: .large)
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        loadingIndicator.startAnimating()
+        return loadingIndicator
+    }()
     
     
     let controlsContainer : UIView = {
@@ -70,7 +44,7 @@ class AGVideoPlayerViewController: UIView {
         return view
     }()
     
-    let lblCurrentTime: UILabel = {
+    let currentTime: UILabel = {
            let lbl = UILabel()
            lbl.text = "00:00"
            lbl.textColor = .white
@@ -102,8 +76,30 @@ class AGVideoPlayerViewController: UIView {
         return slider
     }()
     
+    //MARK: - variables
     var isSkiping = false
+    var isPlaying = false
+    var videoPlayer: AVPlayer?
     
+    @objc func handlePause() {
+        if isPlaying {
+            videoPlayer?.pause()
+            playVideoStream.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+        }else{
+            videoPlayer?.play()
+            playVideoStream.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        }
+        isPlaying = !isPlaying
+    }
+    
+    //MARK: - Listeners
+    @objc func handleClosePlayer() {
+        videoPlayer?.pause()
+        self.removeFromSuperview()
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+        Accessors.AppDelegate.delegate.navigateToHome()
+    }
     
     @objc func onSliderValChanged(slider: UISlider, event: UIEvent) {
         if let touchEvent = event.allTouches?.first {
@@ -126,18 +122,28 @@ class AGVideoPlayerViewController: UIView {
         }
     }
     
-    
-    func hideControllers(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-            self.slider.isHidden = true
-            self.playVideoStream.isHidden = true
-        })
+    @objc func showControllers(sender : UITapGestureRecognizer) {
+        self.slider.isHidden = false
+        self.playVideoStream.isHidden = false
+        self.closeButton.isHidden = false
         
+        self.hideControllers()
     }
     
+    func hideControllers(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 6, execute: {
+            self.slider.isHidden = true
+            self.playVideoStream.isHidden = true
+            self.closeButton.isHidden = true
+        })
+    }
+    
+
+    //MARK: - Initialize our UIView frame and add subviews
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
+    
         setupPlayerView()
         addSubview(controlsContainer)
         controlsContainer.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
@@ -164,29 +170,32 @@ class AGVideoPlayerViewController: UIView {
         
 
         controlsContainer.addSubview(seekVideoLength)
-        controlsContainer.addSubview(lblCurrentTime)
+        controlsContainer.addSubview(currentTime)
         
         seekVideoLength.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         seekVideoLength.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
         seekVideoLength.widthAnchor.constraint(equalToConstant: 60).isActive = true
         seekVideoLength.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
-        lblCurrentTime.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
-        lblCurrentTime.heightAnchor.constraint(equalToConstant: 24).isActive = true
-        lblCurrentTime.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        lblCurrentTime.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50).isActive = true
+        currentTime.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
+        currentTime.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        currentTime.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        currentTime.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50).isActive = true
 
         controlsContainer.addSubview(slider)
-        slider.leadingAnchor.constraint(equalTo: lblCurrentTime.trailingAnchor).isActive = true
+        slider.leadingAnchor.constraint(equalTo: currentTime.trailingAnchor).isActive = true
         slider.trailingAnchor.constraint(equalTo: seekVideoLength.leadingAnchor).isActive = true
         slider.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50).isActive = true
         self.backgroundColor = .black
         
         self.hideControllers()
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.showControllers))
+        self.controlsContainer.addGestureRecognizer(gesture)
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("Internal error occurred")
     }
     
     func setupControlBGLayer(){
@@ -217,7 +226,7 @@ class AGVideoPlayerViewController: UIView {
                 let seconds = CMTimeGetSeconds(progressTime)
                 let secondsText = String(format: "%2d", Int(seconds) % 60)
                 let minutesText = String(format: "%02d",Int(seconds) / 60)
-                self.lblCurrentTime.text = "\(minutesText):\(secondsText)"
+                self.currentTime.text = "\(minutesText):\(secondsText)"
                 
                 if !self.isSkiping{
                     if let duration = self.videoPlayer?.currentItem?.duration {
@@ -236,7 +245,7 @@ class AGVideoPlayerViewController: UIView {
         if keyPath == "currentItem.loadedTimeRanges" {
             indicator.stopAnimating()
             controlsContainer.backgroundColor = .clear
-            playVideoStream.isHidden = false
+            //playVideoStream.isHidden = false
             isPlaying = true
             
             
