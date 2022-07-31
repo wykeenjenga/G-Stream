@@ -61,6 +61,8 @@ class AGVideoPlayerViewController: UIView {
         Accessors.AppDelegate.delegate.navigateToHome()
     }
     
+    
+    
     let controlsContainer : UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -124,6 +126,15 @@ class AGVideoPlayerViewController: UIView {
         }
     }
     
+    
+    func hideControllers(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+            self.slider.isHidden = true
+            self.playVideoStream.isHidden = true
+        })
+        
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.translatesAutoresizingMaskIntoConstraints = false
@@ -170,6 +181,8 @@ class AGVideoPlayerViewController: UIView {
         slider.trailingAnchor.constraint(equalTo: seekVideoLength.leadingAnchor).isActive = true
         slider.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50).isActive = true
         self.backgroundColor = .black
+        
+        self.hideControllers()
     }
     
     required init?(coder: NSCoder) {
