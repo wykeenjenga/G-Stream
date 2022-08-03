@@ -2,7 +2,7 @@
 //  AGScheduleViewController.swift
 //  G-Stream
 //
-//  Created by Wykee Njenga on 7/29/22.
+//  Created by Wykee Njenga on 8/3/22.
 //  Copyright © 2022 G-Stream. All rights reserved.
 //
 
@@ -91,7 +91,9 @@ extension AGScheduleViewController: UITableViewDelegate, UITableViewDataSource{
         
         cell.league.text = event?.league
         cell.teams.text = event?.team
-        cell.time.text = event?.date
+        
+        let date = ConvertDate.convert(dt: event?.date! ?? "")
+        cell.time.text = "\(date)"
         
         let url = URL(string: event?.imageUrl ?? "")!
         cell.leagueImage.setImageUrl(url: url)
