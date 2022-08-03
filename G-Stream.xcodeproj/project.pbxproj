@@ -46,7 +46,6 @@
 		CE18323B2894E4240029C91D /* EventsRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18323A2894E4240029C91D /* EventsRepositoryInterface.swift */; };
 		CE18323E2894E5F90029C91D /* AGAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18323D2894E5F90029C91D /* AGAPIGateway.swift */; };
 		CE1832442894ED9A0029C91D /* LiveEventsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1832432894ED9A0029C91D /* LiveEventsUseCase.swift */; };
-		CE18324728950E680029C91D /* AGDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18324628950E680029C91D /* AGDatabase.swift */; };
 		CE18324A28953BAA0029C91D /* HUDLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18324928953BAA0029C91D /* HUDLoaderProtocol.swift */; };
 		CE18324D28954C880029C91D /* AGLiveEventViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE18324B28954C880029C91D /* AGLiveEventViewCell.xib */; };
 		CE18324E28954C880029C91D /* AGLiveEventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18324C28954C880029C91D /* AGLiveEventViewCell.swift */; };
@@ -146,7 +145,6 @@
 		CE18323A2894E4240029C91D /* EventsRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsRepositoryInterface.swift; sourceTree = "<group>"; };
 		CE18323D2894E5F90029C91D /* AGAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGAPIGateway.swift; sourceTree = "<group>"; };
 		CE1832432894ED9A0029C91D /* LiveEventsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveEventsUseCase.swift; sourceTree = "<group>"; };
-		CE18324628950E680029C91D /* AGDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGDatabase.swift; sourceTree = "<group>"; };
 		CE18324928953BAA0029C91D /* HUDLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDLoaderProtocol.swift; sourceTree = "<group>"; };
 		CE18324B28954C880029C91D /* AGLiveEventViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGLiveEventViewCell.xib; sourceTree = "<group>"; };
 		CE18324C28954C880029C91D /* AGLiveEventViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGLiveEventViewCell.swift; sourceTree = "<group>"; };
@@ -336,7 +334,6 @@
 		CE11210328928E7D0046619D /* Business */ = {
 			isa = PBXGroup;
 			children = (
-				CE18324528950E560029C91D /* Data */,
 				CE18323C2894E5D50029C91D /* API Gateway */,
 				CE4268BC2893D80F00158C26 /* Themes */,
 				CE11211028929FB80046619D /* Accessors */,
@@ -517,14 +514,6 @@
 				CE1832632895ADB80029C91D /* ScheduledEventsUseCase.swift */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		CE18324528950E560029C91D /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				CE18324628950E680029C91D /* AGDatabase.swift */,
-			);
-			path = Data;
 			sourceTree = "<group>";
 		};
 		CE18324F289550B40029C91D /* ImageDownloader */ = {
@@ -1003,7 +992,6 @@
 				CE62900C2893B35F006C3552 /* NetworkLogger.swift in Sources */,
 				CE183254289557740029C91D /* AGCustomView.swift in Sources */,
 				CE6290182893B80A006C3552 /* AGLiveDIContainer.swift in Sources */,
-				CE18324728950E680029C91D /* AGDatabase.swift in Sources */,
 				CE1832282894D9390029C91D /* AGExtension+UIViewController.swift in Sources */,
 				CE18325E2895A68E0029C91D /* AGScheduledEventsViewCell.swift in Sources */,
 				CE1832372894E3AB0029C91D /* DefaultEventsRepository.swift in Sources */,

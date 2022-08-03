@@ -44,7 +44,7 @@ class AGVideoPlayerViewController: UIView {
         return view
     }()
     
-    let currentTime: UILabel = {
+    var currentTime: UILabel = {
            let lbl = UILabel()
            lbl.text = "00:00"
            lbl.textColor = .white
@@ -55,7 +55,7 @@ class AGVideoPlayerViewController: UIView {
        }()
     
     
-    let seekVideoLength: UILabel = {
+    let videoDuration: UILabel = {
         let lbl = UILabel()
         lbl.text = "00:00"
         lbl.textColor = .white
@@ -80,6 +80,7 @@ class AGVideoPlayerViewController: UIView {
     var isSkiping = false
     var isPlaying = false
     var videoPlayer: AVPlayer?
+    var isControllerHidden: Bool = false
     
     @objc func handlePause() {
         if isPlaying {
@@ -123,11 +124,24 @@ class AGVideoPlayerViewController: UIView {
     }
     
     @objc func showControllers(sender : UITapGestureRecognizer) {
-        self.slider.isHidden = false
-        self.playVideoStream.isHidden = false
-        self.closeButton.isHidden = false
-        
-        self.hideControllers()
+        if isControllerHidden{
+            self.slider.isHidden = false
+            self.playVideoStream.isHidden = false
+            self.closeButton.isHidden = false
+            self.hideControllers()
+            self.isControllerHidden = false
+            self.currentTime.isHidden = false
+            self.videoDuration.isHidden = false
+            print("HIddem")
+        }else{
+            self.slider.isHidden = true
+            self.playVideoStream.isHidden = true
+            self.closeButton.isHidden = true
+            self.isControllerHidden = true
+            self.currentTime.isHidden = true
+            self.videoDuration.isHidden = true
+            print("not")
+        }
     }
     
     func hideControllers(){
@@ -135,6 +149,9 @@ class AGVideoPlayerViewController: UIView {
             self.slider.isHidden = true
             self.playVideoStream.isHidden = true
             self.closeButton.isHidden = true
+            self.isControllerHidden = true
+            self.currentTime.isHidden = true
+            self.videoDuration.isHidden = true
         })
     }
     
@@ -169,13 +186,13 @@ class AGVideoPlayerViewController: UIView {
         closeButton.addTarget(self, action: #selector(handleClosePlayer), for: .touchUpInside)
         
 
-        controlsContainer.addSubview(seekVideoLength)
+        controlsContainer.addSubview(videoDuration)
         controlsContainer.addSubview(currentTime)
         
-        seekVideoLength.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        seekVideoLength.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
-        seekVideoLength.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        seekVideoLength.heightAnchor.constraint(equalToConstant: 24).isActive = true
+        videoDuration.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        videoDuration.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -50).isActive = true
+        videoDuration.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        videoDuration.heightAnchor.constraint(equalToConstant: 24).isActive = true
         
         currentTime.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
         currentTime.heightAnchor.constraint(equalToConstant: 24).isActive = true
@@ -184,7 +201,7 @@ class AGVideoPlayerViewController: UIView {
 
         controlsContainer.addSubview(slider)
         slider.leadingAnchor.constraint(equalTo: currentTime.trailingAnchor).isActive = true
-        slider.trailingAnchor.constraint(equalTo: seekVideoLength.leadingAnchor).isActive = true
+        slider.trailingAnchor.constraint(equalTo: videoDuration.leadingAnchor).isActive = true
         slider.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50).isActive = true
         self.backgroundColor = .black
         
@@ -207,8 +224,9 @@ class AGVideoPlayerViewController: UIView {
     }
     
     func setupPlayerView() {
+        
         let liveStreamUrl = URL(string: StreamingVideoURL.videoUrl)
-    
+        
         if let url = liveStreamUrl{
             
             let asset = AVURLAsset(url: url, options: ["AVURLAssetHTTPHeaderFieldsKey": Header.headers])
@@ -217,6 +235,7 @@ class AGVideoPlayerViewController: UIView {
             let playerlayer = AVPlayerLayer(player: videoPlayer)
             self.layer.addSublayer(playerlayer)
             playerlayer.frame = self.frame
+            
             videoPlayer?.play()
             videoPlayer?.addObserver(self, forKeyPath: "currentItem.loadedTimeRanges", options: .new, context: nil)
             
@@ -234,7 +253,6 @@ class AGVideoPlayerViewController: UIView {
                         self.slider.value = Float(seconds / durationSeconds)
                     }
                 }
-                
             })
        }
                
@@ -245,18 +263,14 @@ class AGVideoPlayerViewController: UIView {
         if keyPath == "currentItem.loadedTimeRanges" {
             indicator.stopAnimating()
             controlsContainer.backgroundColor = .clear
-            //playVideoStream.isHidden = false
             isPlaying = true
             
-            
             if let duration = videoPlayer?.currentItem?.duration {
-                
                 let seconds = CMTimeGetSeconds(duration)
                 let secondsText = Int(seconds) % 60
                 let minutesText = String(format: "%02d",Int(seconds) / 60)
-                self.seekVideoLength.text = "\(minutesText):\(secondsText)"
+                self.videoDuration.text = "\(minutesText):\(secondsText)"
             }
-            
         }
     }
     

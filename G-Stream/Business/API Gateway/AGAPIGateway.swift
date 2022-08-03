@@ -62,6 +62,7 @@ class AGAPIGateway {
                     
                     DispatchQueue.main.async {
                         for events in responseData{
+                        
                             liveEventsArray.append(events)
                         }
                         completion(liveEventsArray, nil)

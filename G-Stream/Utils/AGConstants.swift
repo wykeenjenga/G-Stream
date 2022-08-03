@@ -46,14 +46,23 @@ struct StreamingVideoURL{
 }
 
 struct ConvertDate{
-    static func convert(dt: String) -> Date{
+    static func convert(dt: String) -> String{
+        print("DT: \(dt)")
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
-        let date = dateFormatter.date(from: dt)!
 
-        print(date)
-        return date
+        let dateFormatterFinal = DateFormatter()
+        dateFormatterFinal.dateFormat = "MMM d, h:mm a"
+        
+        var string = ""
+        if let date = dateFormatter.date(from: dt) {
+            print("DATE::::\(dateFormatterFinal.string(from: date))")
+            string = "\(dateFormatterFinal.string(from: date))"
+        } else {
+            let date = dateFormatter.date(from: dt)!
+        }
+        return string
     }
 }
