@@ -13,7 +13,6 @@ class AGAPIGateway {
     
     private static let _door = AGAPIGateway.init()
     
-    
     @discardableResult class func door() -> AGAPIGateway {
         return self._door
     }
@@ -28,6 +27,11 @@ class AGAPIGateway {
             if error == nil{
                 do {
                     let decoder = JSONDecoder()
+                    
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+                    decoder.dateDecodingStrategy = .formatted(formatter)
+                    
                     let responseData = try decoder.decode([AGScheduledEvents].self, from: data!)
                     
                     DispatchQueue.main.async {
@@ -40,7 +44,7 @@ class AGAPIGateway {
                     print(error)
                 }
             }else {
-                print(error ?? "Unknown error")
+                print(error ?? "Error occured")
                 return
             }
         }
@@ -58,8 +62,13 @@ class AGAPIGateway {
             if error == nil{
                 do {
                     let decoder = JSONDecoder()
-                    let responseData = try decoder.decode([AGLiveEvents].self, from: data!)
+                    //MARK: - sort events by date using date formatter
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
+                    decoder.dateDecodingStrategy = .formatted(formatter)
                     
+                    let responseData = try decoder.decode([AGLiveEvents].self, from: data!)
+    
                     DispatchQueue.main.async {
                         for events in responseData{
                         
@@ -71,7 +80,7 @@ class AGAPIGateway {
                     print(error)
                 }
             }else {
-                print(error ?? "Unknown error")
+                print(error ?? "Error occured")
                 return
             }
         }
