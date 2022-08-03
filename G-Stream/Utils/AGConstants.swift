@@ -47,7 +47,7 @@ struct StreamingVideoURL{
 
 struct ConvertDate{
     static func convert(dt: String) -> String{
-        print("DT: \(dt)")
+
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
@@ -61,7 +61,7 @@ struct ConvertDate{
             print("DATE::::\(dateFormatterFinal.string(from: date))")
             string = "\(dateFormatterFinal.string(from: date))"
         } else {
-            let date = dateFormatter.date(from: dt)!
+            print("Fucking Error converting date")
         }
         return string
     }
