@@ -52,7 +52,7 @@
 		CE183251289550FA0029C91D /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE183250289550FA0029C91D /* ImageDownloader.swift */; };
 		CE183254289557740029C91D /* AGCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE183253289557740029C91D /* AGCustomView.swift */; };
 		CE18325728956BC80029C91D /* AGAppPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18325628956BC80029C91D /* AGAppPlayer.swift */; };
-		CE18325928956BD40029C91D /* AGVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18325828956BD40029C91D /* AGVideoPlayerViewController.swift */; };
+		CE18325928956BD40029C91D /* AGVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18325828956BD40029C91D /* AGVideoPlayerView.swift */; };
 		CE18325E2895A68E0029C91D /* AGScheduledEventsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE18325C2895A68E0029C91D /* AGScheduledEventsViewCell.swift */; };
 		CE18325F2895A68E0029C91D /* AGScheduledEventsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE18325D2895A68E0029C91D /* AGScheduledEventsViewCell.xib */; };
 		CE1832622895A7950029C91D /* AGScheduledViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1832612895A7950029C91D /* AGScheduledViewModel.swift */; };
@@ -79,6 +79,9 @@
 		CE62901A2893BCBA006C3552 /* AGScheduleDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290192893BCB9006C3552 /* AGScheduleDIContainer.swift */; };
 		CE62901E2893BD49006C3552 /* AGScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62901C2893BD49006C3552 /* AGScheduleViewController.swift */; };
 		CE62901F2893BD49006C3552 /* AGScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE62901D2893BD49006C3552 /* AGScheduleViewController.xib */; };
+		CEEAF785289AB69B00EC90E8 /* TabBarAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1832212894D4DC0029C91D /* TabBarAssets.xcassets */; };
+		CEEAF786289AB69B00EC90E8 /* TabBarAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1832212894D4DC0029C91D /* TabBarAssets.xcassets */; };
+		CEEAF78A289AD9CD00EC90E8 /* AGPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEAF789289AD9CD00EC90E8 /* AGPlayerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,7 +154,7 @@
 		CE183250289550FA0029C91D /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		CE183253289557740029C91D /* AGCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGCustomView.swift; sourceTree = "<group>"; };
 		CE18325628956BC80029C91D /* AGAppPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGAppPlayer.swift; sourceTree = "<group>"; };
-		CE18325828956BD40029C91D /* AGVideoPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGVideoPlayerViewController.swift; sourceTree = "<group>"; };
+		CE18325828956BD40029C91D /* AGVideoPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGVideoPlayerView.swift; sourceTree = "<group>"; };
 		CE18325C2895A68E0029C91D /* AGScheduledEventsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduledEventsViewCell.swift; sourceTree = "<group>"; };
 		CE18325D2895A68E0029C91D /* AGScheduledEventsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGScheduledEventsViewCell.xib; sourceTree = "<group>"; };
 		CE1832612895A7950029C91D /* AGScheduledViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduledViewModel.swift; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 		CE6290192893BCB9006C3552 /* AGScheduleDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduleDIContainer.swift; sourceTree = "<group>"; };
 		CE62901C2893BD49006C3552 /* AGScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduleViewController.swift; sourceTree = "<group>"; };
 		CE62901D2893BD49006C3552 /* AGScheduleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGScheduleViewController.xib; sourceTree = "<group>"; };
+		CEEAF789289AD9CD00EC90E8 /* AGPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGPlayerViewModel.swift; sourceTree = "<group>"; };
 		E7E2F9EC0FF2C7ED9E1C4B8F /* Pods-G-Stream-G-StreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Stream-G-StreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-G-Stream-G-StreamUITests/Pods-G-Stream-G-StreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -535,8 +539,8 @@
 		CE18325528956BB10029C91D /* VideoPlayerModule */ = {
 			isa = PBXGroup;
 			children = (
-				CE18325828956BD40029C91D /* AGVideoPlayerViewController.swift */,
-				CE18325628956BC80029C91D /* AGAppPlayer.swift */,
+				CEEAF788289AD97500EC90E8 /* ViewModel */,
+				CEEAF787289AD96900EC90E8 /* ViewCotroller */,
 			);
 			path = VideoPlayerModule;
 			sourceTree = "<group>";
@@ -711,6 +715,23 @@
 			path = ScheduleEventsModule;
 			sourceTree = "<group>";
 		};
+		CEEAF787289AD96900EC90E8 /* ViewCotroller */ = {
+			isa = PBXGroup;
+			children = (
+				CE18325828956BD40029C91D /* AGVideoPlayerView.swift */,
+				CE18325628956BC80029C91D /* AGAppPlayer.swift */,
+			);
+			path = ViewCotroller;
+			sourceTree = "<group>";
+		};
+		CEEAF788289AD97500EC90E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CEEAF789289AD9CD00EC90E8 /* AGPlayerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -741,7 +762,6 @@
 				CE1120DE28928CAB0046619D /* Sources */,
 				CE1120DF28928CAB0046619D /* Frameworks */,
 				CE1120E028928CAB0046619D /* Resources */,
-				410E444122936A4E103A6C8F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -850,6 +870,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEAF785289AB69B00EC90E8 /* TabBarAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,6 +878,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEEAF786289AB69B00EC90E8 /* TabBarAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,23 +944,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		410E444122936A4E103A6C8F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-G-StreamTests/Pods-G-StreamTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-G-StreamTests/Pods-G-StreamTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-G-StreamTests/Pods-G-StreamTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B68B0BF5CE90BC97D1DF7412 /* [CP] Check Pods Manifest.lock */ = {
@@ -1008,6 +1013,7 @@
 				CE62900D2893B35F006C3552 /* NetworkConfiguration.swift in Sources */,
 				CE1832322894E14C0029C91D /* AGAPIEndPoints.swift in Sources */,
 				CE1832642895ADB80029C91D /* ScheduledEventsUseCase.swift in Sources */,
+				CEEAF78A289AD9CD00EC90E8 /* AGPlayerViewModel.swift in Sources */,
 				CE4268BE2893D80F00158C26 /* Theme.swift in Sources */,
 				CE18324A28953BAA0029C91D /* HUDLoaderProtocol.swift in Sources */,
 				CE62900E2893B35F006C3552 /* AGRequest.swift in Sources */,
@@ -1030,7 +1036,7 @@
 				CE11212B2892B1BE0046619D /* AGConstants.swift in Sources */,
 				CE628FF92893AD69006C3552 /* AGError.swift in Sources */,
 				CE1832622895A7950029C91D /* AGScheduledViewModel.swift in Sources */,
-				CE18325928956BD40029C91D /* AGVideoPlayerViewController.swift in Sources */,
+				CE18325928956BD40029C91D /* AGVideoPlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

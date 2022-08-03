@@ -113,18 +113,34 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Live Matches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rAN-ha-PJx">
-                                        <rect key="frame" x="62" y="34" width="184" height="28"/>
+                                        <rect key="frame" x="62" y="34" width="290" height="28"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Recoleta-Bold" family="Recoleta" pointSize="20"/>
                                         <color key="textColor" red="0.77618867160000005" green="0.1079762205" blue="0.1074553505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fe1-fS-ix0" customClass="AGBindingButton" customModule="G_Stream" customModuleProvider="target">
+                                        <rect key="frame" x="360" y="25" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fe1-fS-ix0" secondAttribute="height" multiplier="1:1" id="oH0-hf-TCB"/>
+                                            <constraint firstAttribute="width" constant="46" id="vqG-KC-7LX"/>
+                                            <constraint firstAttribute="height" constant="46" id="yoO-1W-sjm"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.77618867160000005" green="0.1079762205" blue="0.1074553505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="gearshape.fill" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="white"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="v2G-X6-VZ5" secondAttribute="bottom" id="1wy-g2-JoA"/>
                                     <constraint firstItem="rAN-ha-PJx" firstAttribute="leading" secondItem="v2G-X6-VZ5" secondAttribute="trailing" constant="8" symbolic="YES" id="4N2-vG-2m6"/>
+                                    <constraint firstAttribute="bottom" secondItem="fe1-fS-ix0" secondAttribute="bottom" id="7oT-ZP-6QA"/>
                                     <constraint firstItem="v2G-X6-VZ5" firstAttribute="leading" secondItem="VTD-37-UN1" secondAttribute="leading" constant="8" id="9eB-gS-ccy"/>
+                                    <constraint firstAttribute="trailing" secondItem="fe1-fS-ix0" secondAttribute="trailing" constant="8" id="kku-27-tD4"/>
+                                    <constraint firstItem="fe1-fS-ix0" firstAttribute="leading" secondItem="rAN-ha-PJx" secondAttribute="trailing" constant="8" symbolic="YES" id="kzc-51-5tQ"/>
                                     <constraint firstAttribute="height" constant="71" id="wBi-VI-4QR"/>
                                 </constraints>
                             </view>
@@ -249,6 +265,7 @@
     <resources>
         <image name="chat" width="256" height="256"/>
         <image name="chatSelected" width="256" height="256"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="home" width="256" height="256"/>
         <image name="homeSelected" width="256" height="256"/>
         <image name="line.3.horizontal" catalog="system" width="128" height="64"/>
