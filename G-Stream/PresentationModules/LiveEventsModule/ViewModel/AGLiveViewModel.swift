@@ -33,13 +33,7 @@ final class DefaultAGLiveViewModel: AGLiveViewModel {
     var eventsData: Dynamic<AGLiveEventsModelData> = Dynamic(AGLiveEventsModelData())
     var route: Dynamic<AGLiveViewModelRoute> = Dynamic(.initial)
     
-    var liveEventsUseCase: LiveEventsUseCase
-    
-    init(liveEventsUseCase: LiveEventsUseCase) {
-        self.liveEventsUseCase = liveEventsUseCase
-    }
-    
-    func fetchData(){
+    init() {
         
     }
 }
@@ -55,10 +49,9 @@ extension AGLiveViewModel{
                 var liveEvents = AGLiveEventsModelData()
                 liveEvents.liveEvents = events
                 self.eventsData.value = liveEvents
-                
+
                 self.route.value = .activity(loading: false)
             }
         }
-        
     }
 }

@@ -55,15 +55,14 @@ extension URLSession: NetworkSession {
 }
 
 // MARK: - Implementation
-
 final public class DefaultNetworkService {
     
     private let session: NetworkSession
-    private let config: APNetworkConfigurable
+    private let config: AGNetworkConfigurable
     private let logger: NetworkErrorLogger
     
     public init(session: NetworkSession,
-                config: APNetworkConfigurable,
+                config: AGNetworkConfigurable,
                 logger: NetworkErrorLogger = DefaultNetworkErrorLogger()) {
         self.session = session
         self.config = config
@@ -106,6 +105,7 @@ extension DefaultNetworkService: NetworkService {
     public func request(endpoint: AGRequestable, completion: @escaping (Result<Data?, NetworkError>) -> Void) -> Cancellable? {
         do {
             let urlRequest = try endpoint.request(with: config)
+            print("Fucking Url  \(urlRequest)")
             return request(request: urlRequest, completion: completion)
         } catch {
             completion(.failure(NetworkError.urlGeneration))

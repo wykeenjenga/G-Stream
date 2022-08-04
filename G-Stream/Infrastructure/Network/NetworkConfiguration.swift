@@ -8,13 +8,13 @@
 
 import Foundation
 
-public protocol APNetworkConfigurable {
+public protocol AGNetworkConfigurable {
     var baseURL: URL { get }
     var headers: [String: String] { get }
     var queryParameters: [String: String] { get }
 }
 
-public struct APNetworkConfiguration: APNetworkConfigurable {
+public struct AGNetworkConfiguration: AGNetworkConfigurable {
     public var baseURL: URL
     public var headers: [String : String]
     public var queryParameters: [String : String]

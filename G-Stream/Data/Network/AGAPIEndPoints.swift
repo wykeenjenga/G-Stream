@@ -9,7 +9,6 @@
 import Foundation
 
 struct AGAPIEndPoints {
-    
     struct Requests {
         static func getScheduledEvents() -> (DataEndpoint<AGScheduledEvents>) {
             return DataEndpoint(path: "getSchedule")

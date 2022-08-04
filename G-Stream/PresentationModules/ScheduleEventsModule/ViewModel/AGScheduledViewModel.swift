@@ -32,11 +32,10 @@ final class DefaultAGScheduledViewModel: AGScheduledViewModel {
     
     var eventsData: Dynamic<AGScheduledEventsModelData> = Dynamic(AGScheduledEventsModelData())
     var route: Dynamic<AGLiveViewModelRoute> = Dynamic(.initial)
+
     
-    var liveEventsUseCase: LiveEventsUseCase
-    
-    init(liveEventsUseCase: LiveEventsUseCase) {
-        self.liveEventsUseCase = liveEventsUseCase
+    init() {
+        
     }
 }
 

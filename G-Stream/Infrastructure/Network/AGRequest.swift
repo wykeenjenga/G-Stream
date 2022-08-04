@@ -44,12 +44,12 @@ public protocol AGRequestable {
     var bodyParamaters: [String: Any] { get }
     var bodyEncoding: AGRequestBodyEncoding { get }
     
-    func request(with configuration: APNetworkConfigurable) throws -> URLRequest
+    func request(with configuration: AGNetworkConfigurable) throws -> URLRequest
 }
 
 extension AGRequestable {
     
-    private func url(with configuration: APNetworkConfigurable) throws -> URL {
+    private func url(with configuration: AGNetworkConfigurable) throws -> URL {
         //Preping up the endPoint.
         let baseURL = configuration.baseURL.absoluteString.last != "/" ? configuration.baseURL.absoluteString + "/" : configuration.baseURL.absoluteString
         let endPoint = isFullPath ? path : baseURL.appending(path)
@@ -70,7 +70,7 @@ extension AGRequestable {
         return url
     }
     
-    public func request(with configuration: APNetworkConfigurable) throws -> URLRequest {
+    public func request(with configuration: AGNetworkConfigurable) throws -> URLRequest {
         let url = try self.url(with: configuration)
         var urlRequest = URLRequest(url: url)
         var headers: [String: String] = configuration.headers

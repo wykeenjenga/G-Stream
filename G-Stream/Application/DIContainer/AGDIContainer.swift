@@ -11,7 +11,7 @@ import Foundation
 final class AGDIContainer {
     // MARK: - Network
     lazy var apiDataTransferService: DataTransfer = {
-        let config = APNetworkConfiguration(baseURL: URL(string: APAppConfigurations.apiBaseURL)!)
+        let config = AGNetworkConfiguration(baseURL: URL(string: APAppConfigurations.apiBaseURL)!)
         let apiDataNetwork = DefaultNetworkService(session: URLSession.shared,
                                                    config: config)
         return DefaultDataTransferService(with: apiDataNetwork)

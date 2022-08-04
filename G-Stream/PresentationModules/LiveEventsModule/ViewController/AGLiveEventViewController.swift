@@ -29,10 +29,7 @@ class AGLiveEventViewController: BaseViewController{
         
         UserDefaults.standard.set(true, forKey: "isOnboarding")
     }
-    
-    static func getLiveEvents() -> (DataEndpoint<AGLiveEvents>) {
-        return DataEndpoint(path: "getEvents")
-    }
+
     
     func scrollToBottom(){
         DispatchQueue.main.async {

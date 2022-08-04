@@ -14,7 +14,6 @@ public enum DataTransferError: Error {
     case networkFailure(NetworkError)
 }
 
-
 final public class DataEndpoint<T: Any>: AGRequest { }
 
 public protocol DataTransfer {
@@ -100,13 +99,6 @@ extension DefaultDataTransferService: DataTransfer {
                     if let _responseDict = responseDict, let result = T.from(_responseDict) {
                         respondOnQueue.async { completion(.success(result)) }
                     }
-//                    else {
-//                        let responseArray = try JSONSerialization.jsonObject(with: responseData,
-//                                                                            options: .mutableLeaves) as? NSArray
-//                        if let _responseArray = responseArray, let result = T.from(_responseArray) {
-//                            respondOnQueue.async { completion(.success(result)) }
-//                        }
-//                    }
                 } catch {
                     respondOnQueue.async { completion(Result.failure(DataTransferError.parsingJSON)) }
                 }

@@ -26,15 +26,7 @@ final class AGScheduleDIContainer {
     
     
     private func makeScheduledEventsViewModel() -> AGScheduledViewModel{
-        return DefaultAGScheduledViewModel(liveEventsUseCase: makeEventsRepository())
+        return DefaultAGScheduledViewModel()
     }
-    
-    private func makeEventsRepository() -> LiveEventsUseCase {
-        return DefaultLiveEventsUseCase(eventRepository: makeAllEventsRepository())
-    }
-    
-    private func makeAllEventsRepository() -> EventsRepositoryInterface {
-        return DefaultEventsRepository(dataTransferService: self.dependencies.apiDataTransferService)
-    }
-    
+
 }
