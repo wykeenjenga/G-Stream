@@ -58,7 +58,6 @@
 		CE1832622895A7950029C91D /* AGScheduledViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1832612895A7950029C91D /* AGScheduledViewModel.swift */; };
 		CE1832642895ADB80029C91D /* ScheduledEventsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1832632895ADB80029C91D /* ScheduledEventsUseCase.swift */; };
 		CE4268BB2893D20600158C26 /* AGBindingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4268BA2893D20600158C26 /* AGBindingButton.swift */; };
-		CE4268BE2893D80F00158C26 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4268BD2893D80F00158C26 /* Theme.swift */; };
 		CE628FE528932291006C3552 /* AGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FE428932291006C3552 /* AGTabBarController.swift */; };
 		CE628FF028932FAD006C3552 /* AGLiveEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FEE28932FAD006C3552 /* AGLiveEventViewController.swift */; };
 		CE628FF128932FAD006C3552 /* AGLiveEventViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE628FEF28932FAD006C3552 /* AGLiveEventViewController.xib */; };
@@ -160,7 +159,6 @@
 		CE1832612895A7950029C91D /* AGScheduledViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduledViewModel.swift; sourceTree = "<group>"; };
 		CE1832632895ADB80029C91D /* ScheduledEventsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEventsUseCase.swift; sourceTree = "<group>"; };
 		CE4268BA2893D20600158C26 /* AGBindingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGBindingButton.swift; sourceTree = "<group>"; };
-		CE4268BD2893D80F00158C26 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CE628FE428932291006C3552 /* AGTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGTabBarController.swift; sourceTree = "<group>"; };
 		CE628FEE28932FAD006C3552 /* AGLiveEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGLiveEventViewController.swift; sourceTree = "<group>"; };
 		CE628FEF28932FAD006C3552 /* AGLiveEventViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGLiveEventViewController.xib; sourceTree = "<group>"; };
@@ -339,7 +337,6 @@
 			isa = PBXGroup;
 			children = (
 				CE18323C2894E5D50029C91D /* API Gateway */,
-				CE4268BC2893D80F00158C26 /* Themes */,
 				CE11211028929FB80046619D /* Accessors */,
 			);
 			path = Business;
@@ -577,14 +574,6 @@
 				CE4268BA2893D20600158C26 /* AGBindingButton.swift */,
 			);
 			path = AGBindingButton;
-			sourceTree = "<group>";
-		};
-		CE4268BC2893D80F00158C26 /* Themes */ = {
-			isa = PBXGroup;
-			children = (
-				CE4268BD2893D80F00158C26 /* Theme.swift */,
-			);
-			path = Themes;
 			sourceTree = "<group>";
 		};
 		CE4268BF2893E20000158C26 /* HomeDIContainers */ = {
@@ -1014,7 +1003,6 @@
 				CE1832322894E14C0029C91D /* AGAPIEndPoints.swift in Sources */,
 				CE1832642895ADB80029C91D /* ScheduledEventsUseCase.swift in Sources */,
 				CEEAF78A289AD9CD00EC90E8 /* AGPlayerViewModel.swift in Sources */,
-				CE4268BE2893D80F00158C26 /* Theme.swift in Sources */,
 				CE18324A28953BAA0029C91D /* HUDLoaderProtocol.swift in Sources */,
 				CE62900E2893B35F006C3552 /* AGRequest.swift in Sources */,
 				CE62900B2893B35F006C3552 /* NetworkService.swift in Sources */,

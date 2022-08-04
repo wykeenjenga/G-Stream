@@ -113,7 +113,7 @@ class AGTabBarController: UIViewController{
                     if tabTitle.tag == sender.tag {
                         tabTitle.textColor = UIColor(named: "orange")
                     } else {
-                        tabTitle.textColor = Theme.currentTheme().textColor
+                        tabTitle.textColor = .black
                     }
                 }
             }

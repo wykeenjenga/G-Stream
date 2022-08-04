@@ -55,6 +55,10 @@ class AGAPIGateway {
     func getLiveEvents(completion: @escaping([AGLiveEvents], Error?) -> Void) {
         
         var liveEventsArray = [AGLiveEvents]()
+    
+        let endPoint = AGAPIEndPoints.Requests.getLiveEvents()
+        
+        print("LIVE EVENTS:::::::::::\(endPoint)")
 
         let url = URL(string: "https://us-central1-dazn-sandbox.cloudfunctions.net/getEvents")!
 
