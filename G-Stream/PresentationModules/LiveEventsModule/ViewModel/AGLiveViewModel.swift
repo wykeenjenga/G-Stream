@@ -38,6 +38,10 @@ final class DefaultAGLiveViewModel: AGLiveViewModel {
     init(liveEventsUseCase: LiveEventsUseCase) {
         self.liveEventsUseCase = liveEventsUseCase
     }
+    
+    func fetchData(){
+        
+    }
 }
 
 extension AGLiveViewModel{

@@ -58,7 +58,6 @@ class AGAPIGateway {
     
         let endPoint = AGAPIEndPoints.Requests.getLiveEvents()
         
-        print("LIVE EVENTS:::::::::::\(endPoint)")
 
         let url = URL(string: "https://us-central1-dazn-sandbox.cloudfunctions.net/getEvents")!
 

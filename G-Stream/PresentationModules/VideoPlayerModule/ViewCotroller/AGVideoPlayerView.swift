@@ -205,10 +205,10 @@ class AGVideoPlayerViewController: UIView {
         slider.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -50).isActive = true
         self.backgroundColor = .black
         
-        //self.hideControllers()
+        self.hideControllers()
         
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.showControllers))
-        //self.controlsContainer.addGestureRecognizer(gesture)
+        self.controlsContainer.addGestureRecognizer(gesture)
     }
     
     required init?(coder: NSCoder) {

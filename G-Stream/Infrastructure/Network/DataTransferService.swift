@@ -14,6 +14,7 @@ public enum DataTransferError: Error {
     case networkFailure(NetworkError)
 }
 
+
 final public class DataEndpoint<T: Any>: AGRequest { }
 
 public protocol DataTransfer {
