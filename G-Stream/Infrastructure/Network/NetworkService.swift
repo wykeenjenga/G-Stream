@@ -59,14 +59,11 @@ final public class DefaultNetworkService {
     
     private let session: NetworkSession
     private let config: AGNetworkConfigurable
-    private let logger: NetworkErrorLogger
     
     public init(session: NetworkSession,
-                config: AGNetworkConfigurable,
-                logger: NetworkErrorLogger = DefaultNetworkErrorLogger()) {
+                config: AGNetworkConfigurable) {
         self.session = session
         self.config = config
-        self.logger = logger
     }
     
     private func request(request: URLRequest, completion: @escaping (Result<Data?, NetworkError>) -> Void) -> Cancellable {
@@ -77,7 +74,6 @@ final public class DefaultNetworkService {
                 
                 if let response = response as? HTTPURLResponse, (400..<600).contains(response.statusCode) {
                     error = .errorStatusCode(statusCode: response.statusCode)
-                    self?.logger.log(statusCode: response.statusCode)
                 } else if requestError._code == NSURLErrorNotConnectedToInternet {
                     error = .notConnected
                 } else if requestError._code == NSURLErrorCancelled {
@@ -85,16 +81,11 @@ final public class DefaultNetworkService {
                 } else {
                     error = .requestError(requestError)
                 }
-                self?.logger.log(error: requestError)
-                
                 completion(.failure(error))
             } else {
-                self?.logger.log(responseData: data, response: response)
                 completion(.success(data))
             }
         }
-        
-        logger.log(request: request)
         
         return sessionDataTask
     }

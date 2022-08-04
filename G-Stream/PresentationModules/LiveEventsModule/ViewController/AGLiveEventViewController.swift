@@ -67,8 +67,10 @@ class AGLiveEventViewController: BaseViewController{
                 case .activity(let status):
                     if status{
                         self?.showHUD()
+                        print(".................Show")
                     }else{
-                        self?.hideHUD()
+                        //self?.hideHUD()
+                        print(".................Hide")
                     }
                     break
                 default:
@@ -78,7 +80,6 @@ class AGLiveEventViewController: BaseViewController{
         }
 
         self.viewModel.eventsData.bind = { [weak self] _ in
-
             self?.liveEventsTable.reloadData()
         }
     

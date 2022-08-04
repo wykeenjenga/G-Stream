@@ -10,12 +10,12 @@ import Foundation
 
 struct AGAPIEndPoints {
     struct Requests {
-        static func getScheduledEvents() -> (DataEndpoint<AGScheduledEvents>) {
-            return DataEndpoint(path: "getSchedule")
+        static func getScheduledEvents() -> URL {
+            return URL(string: AGAppConfigurations.apiBaseURL)!.appendingPathComponent("getSchedule")
         }
         
-        static func getLiveEvents() -> (DataEndpoint<AGLiveEvents>) {
-            return DataEndpoint(path: "getEvents")
+        static func getLiveEvents() -> URL {
+            return URL(string: AGAppConfigurations.apiBaseURL)!.appendingPathComponent("getEvents")
         }
     }
     

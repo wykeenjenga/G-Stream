@@ -62,9 +62,7 @@
 		CE628FF92893AD69006C3552 /* AGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE628FF82893AD69006C3552 /* AGError.swift */; };
 		CE628FFF2893AF97006C3552 /* AGTabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE628FFE2893AF97006C3552 /* AGTabBarController.storyboard */; };
 		CE6290022893B20F006C3552 /* AGDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290012893B20F006C3552 /* AGDIContainer.swift */; };
-		CE6290062893B2FA006C3552 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290052893B2FA006C3552 /* DataTransferService.swift */; };
 		CE62900B2893B35F006C3552 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290072893B35E006C3552 /* NetworkService.swift */; };
-		CE62900C2893B35F006C3552 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290082893B35F006C3552 /* NetworkLogger.swift */; };
 		CE62900D2893B35F006C3552 /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290092893B35F006C3552 /* NetworkConfiguration.swift */; };
 		CE62900E2893B35F006C3552 /* AGRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62900A2893B35F006C3552 /* AGRequest.swift */; };
 		CE6290112893B4D0006C3552 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290102893B4D0006C3552 /* StoryboardInstantiable.swift */; };
@@ -74,6 +72,7 @@
 		CE62901A2893BCBA006C3552 /* AGScheduleDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6290192893BCB9006C3552 /* AGScheduleDIContainer.swift */; };
 		CE62901E2893BD49006C3552 /* AGScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62901C2893BD49006C3552 /* AGScheduleViewController.swift */; };
 		CE62901F2893BD49006C3552 /* AGScheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE62901D2893BD49006C3552 /* AGScheduleViewController.xib */; };
+		CE6F2D97289C0ECD00F12909 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6F2D96289C0ECD00F12909 /* DataTransferService.swift */; };
 		CEEAF785289AB69B00EC90E8 /* TabBarAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1832212894D4DC0029C91D /* TabBarAssets.xcassets */; };
 		CEEAF786289AB69B00EC90E8 /* TabBarAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE1832212894D4DC0029C91D /* TabBarAssets.xcassets */; };
 		CEEAF78A289AD9CD00EC90E8 /* AGPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEAF789289AD9CD00EC90E8 /* AGPlayerViewModel.swift */; };
@@ -159,9 +158,7 @@
 		CE628FF82893AD69006C3552 /* AGError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGError.swift; sourceTree = "<group>"; };
 		CE628FFE2893AF97006C3552 /* AGTabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AGTabBarController.storyboard; sourceTree = "<group>"; };
 		CE6290012893B20F006C3552 /* AGDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGDIContainer.swift; sourceTree = "<group>"; };
-		CE6290052893B2FA006C3552 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		CE6290072893B35E006C3552 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		CE6290082893B35F006C3552 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		CE6290092893B35F006C3552 /* NetworkConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
 		CE62900A2893B35F006C3552 /* AGRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AGRequest.swift; sourceTree = "<group>"; };
 		CE6290102893B4D0006C3552 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
@@ -171,6 +168,7 @@
 		CE6290192893BCB9006C3552 /* AGScheduleDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduleDIContainer.swift; sourceTree = "<group>"; };
 		CE62901C2893BD49006C3552 /* AGScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGScheduleViewController.swift; sourceTree = "<group>"; };
 		CE62901D2893BD49006C3552 /* AGScheduleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AGScheduleViewController.xib; sourceTree = "<group>"; };
+		CE6F2D96289C0ECD00F12909 /* DataTransferService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		CEEAF789289AD9CD00EC90E8 /* AGPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AGPlayerViewModel.swift; sourceTree = "<group>"; };
 		E7E2F9EC0FF2C7ED9E1C4B8F /* Pods-G-Stream-G-StreamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-G-Stream-G-StreamUITests.debug.xcconfig"; path = "Target Support Files/Pods-G-Stream-G-StreamUITests/Pods-G-Stream-G-StreamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -623,10 +621,9 @@
 		CE6290042893B2E0006C3552 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				CE6290052893B2FA006C3552 /* DataTransferService.swift */,
+				CE6F2D96289C0ECD00F12909 /* DataTransferService.swift */,
 				CE62900A2893B35F006C3552 /* AGRequest.swift */,
 				CE6290092893B35F006C3552 /* NetworkConfiguration.swift */,
-				CE6290082893B35F006C3552 /* NetworkLogger.swift */,
 				CE6290072893B35E006C3552 /* NetworkService.swift */,
 			);
 			path = Network;
@@ -938,10 +935,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE1832342894E2C30029C91D /* AGScheduledEvents.swift in Sources */,
-				CE62900C2893B35F006C3552 /* NetworkLogger.swift in Sources */,
 				CE183254289557740029C91D /* AGCustomView.swift in Sources */,
 				CE6290182893B80A006C3552 /* AGLiveDIContainer.swift in Sources */,
 				CE1832282894D9390029C91D /* AGExtension+UIViewController.swift in Sources */,
+				CE6F2D97289C0ECD00F12909 /* DataTransferService.swift in Sources */,
 				CE18325E2895A68E0029C91D /* AGScheduledEventsViewCell.swift in Sources */,
 				CE6290132893B51F006C3552 /* APProtocols.swift in Sources */,
 				CE1120D428928CA70046619D /* AGHardwallModule.swift in Sources */,
@@ -951,7 +948,6 @@
 				CE18322F2894DE940029C91D /* AGLiveEvents.swift in Sources */,
 				CE6290112893B4D0006C3552 /* StoryboardInstantiable.swift in Sources */,
 				CE11210A28928F370046619D /* AGAppConfiguration.swift in Sources */,
-				CE6290062893B2FA006C3552 /* DataTransferService.swift in Sources */,
 				CE628FF32893A985006C3552 /* AGLiveViewModel.swift in Sources */,
 				CE62900D2893B35F006C3552 /* NetworkConfiguration.swift in Sources */,
 				CE1832322894E14C0029C91D /* AGAPIEndPoints.swift in Sources */,

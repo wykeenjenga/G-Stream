@@ -8,9 +8,11 @@
 
 import Foundation
 import SwiftyJSON
+import Mapper
+
 
 class AGAPIGateway {
-    
+
     private static let _door = AGAPIGateway.init()
     
     @discardableResult class func door() -> AGAPIGateway {
@@ -21,9 +23,9 @@ class AGAPIGateway {
         
         var liveEventsArray = [AGScheduledEvents]()
 
-        let url = URL(string: "https://us-central1-dazn-sandbox.cloudfunctions.net/getSchedule")!
+        let endPoint = AGAPIEndPoints.Requests.getScheduledEvents()
 
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = URLSession.shared.dataTask(with: endPoint) { data, response, error in
             if error == nil{
                 do {
                     let decoder = JSONDecoder()
@@ -44,7 +46,7 @@ class AGAPIGateway {
                     print(error)
                 }
             }else {
-                print(error ?? "Error occured")
+                print(error ?? "fucking Error occured")
                 return
             }
         }
@@ -57,11 +59,8 @@ class AGAPIGateway {
         var liveEventsArray = [AGLiveEvents]()
     
         let endPoint = AGAPIEndPoints.Requests.getLiveEvents()
-        
 
-        let url = URL(string: "https://us-central1-dazn-sandbox.cloudfunctions.net/getEvents")!
-
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+        let task = URLSession.shared.dataTask(with: endPoint) { data, response, error in
             if error == nil{
                 do {
                     let decoder = JSONDecoder()
@@ -69,12 +68,12 @@ class AGAPIGateway {
                     let formatter = DateFormatter()
                     formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ"
                     decoder.dateDecodingStrategy = .formatted(formatter)
-                    
+
                     let responseData = try decoder.decode([AGLiveEvents].self, from: data!)
-    
+
                     DispatchQueue.main.async {
                         for events in responseData{
-                        
+
                             liveEventsArray.append(events)
                         }
                         completion(liveEventsArray, nil)
@@ -83,7 +82,7 @@ class AGAPIGateway {
                     print(error)
                 }
             }else {
-                print(error ?? "Error occured")
+                print(error ?? "fucking Error occured")
                 return
             }
         }
